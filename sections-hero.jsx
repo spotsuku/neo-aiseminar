@@ -45,9 +45,9 @@ function Hero() {
             </div>
 
             <h1 className="hero-headline">
-              <span className="line"><span className="under-strong">表面的なAI活用</span>の時代は、</span>
+              <span className="line" style={{ whiteSpace: 'nowrap' }}><span className="under-strong">表面的なAI活用</span>の時代は、</span>
               <span className="line">終わりました。</span>
-              <span className="line" style={{ marginTop: '0.5em' }}>AIを<span className="under-strong">業務に組み込む</span>時代です。</span>
+              <span className="line" style={{ marginTop: '0.5em', whiteSpace: 'nowrap' }}>AIを<span className="under-strong">業務に組み込む</span>時代です。</span>
             </h1>
 
             <p className="hero-lede">
