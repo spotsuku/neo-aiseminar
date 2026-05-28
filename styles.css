@@ -3582,7 +3582,7 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
 }
 .solution-title .st-line {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 
@@ -4909,10 +4909,11 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
 /* Section split grid — responsive title + lede pairing */
 .sec-split {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: 40px;
   align-items: end;
 }
+.sec-split > * { min-width: 0; }
 @media (max-width: 960px) {
   .sec-split { grid-template-columns: 1fr; gap: 20px; }
 }
