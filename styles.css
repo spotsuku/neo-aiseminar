@@ -54,6 +54,9 @@ html, body {
   text-rendering: optimizeLegibility;
   line-height: 1.75;
   letter-spacing: 0.02em;
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 img { max-width: 100%; display: block; }
@@ -142,6 +145,8 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
   letter-spacing: 0.02em;
   margin: 0;
   position: relative;
+  text-wrap: balance;
+  line-break: strict;
 }
 .display.xl   { font-size: clamp(36px, 5.6vw, 76px); line-height: 1.3; }
 .display.lg   { font-size: clamp(30px, 4vw, 54px); }
@@ -432,6 +437,8 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
   letter-spacing: 0.015em;
   margin: 0 0 28px;
   color: var(--text-onink);
+  text-wrap: balance;
+  line-break: strict;
 }
 .hero-headline .line { display: block; }
 .hero-headline .accent-mark {
@@ -2442,6 +2449,8 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
   line-height: 1.7;
   margin: 0;
   max-width: 36ch;
+  text-wrap: balance;
+  line-break: strict;
 }
 .cc-attribution {
   font-size: 14px;
@@ -3591,6 +3600,8 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
   font-size: clamp(24px, 2.8vw, 40px) !important;
   line-height: 1.55 !important;
   letter-spacing: 0.04em !important;
+  text-wrap: balance;
+  line-break: strict;
 }
 .trust-title .tt-line {
   display: block;
@@ -3827,6 +3838,7 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
   color: var(--ink);
   line-height: 0.85;
   letter-spacing: -0.01em;
+  flex-wrap: wrap;
 }
 .ph-val {
   font-size: clamp(80px, 11vw, 160px);
@@ -3837,6 +3849,7 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
   font-weight: 600;
   color: var(--ink);
   letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 .ph-note {
   font-family: var(--font-jp);
