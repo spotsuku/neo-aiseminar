@@ -17,6 +17,7 @@
 <div id="root"></div>
 
 <script src="image-slot.js"></script>
+<script src="https://unpkg.com/budoux@latest/dist/budoux-ja.min.js"></script>
 
 <script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel" src="hero-console.jsx"></script>
@@ -26,5 +27,31 @@
 <script type="text/babel" src="sections-solution.jsx"></script>
 <script type="text/babel" src="sections-trust.jsx"></script>
 <script type="text/babel" src="app.jsx"></script>
+
+<script>
+  // BudouX: insert <wbr> at natural Japanese phrase boundaries so
+  // text-wrap: balance / pretty break at human-readable positions.
+  // React renders via Babel after DOMContentLoaded, so we wait for the
+  // first heading to appear before applying.
+  (function initBudouX() {
+    if (typeof BudouXJa === 'undefined') return setTimeout(initBudouX, 60);
+    var parser = BudouXJa.loadDefaultJapaneseParser();
+    var selector = '.display, .hero-headline, .lede, .essence-quote, .cc-text, .midcta-title, .midcta-sub, .hero-question p, .hps-text, .hob-text, .hb-sub, .rb-title, .rb-text, .hob-title';
+    function apply() {
+      document.querySelectorAll(selector).forEach(function (el) {
+        if (el.dataset.budoux === '1') return;
+        parser.applyToElement(el);
+        el.dataset.budoux = '1';
+      });
+    }
+    var root = document.getElementById('root');
+    if (root && root.querySelector('.hero-headline, .display')) { apply(); return; }
+    if (!root) return;
+    var obs = new MutationObserver(function () {
+      if (root.querySelector('.hero-headline, .display')) { apply(); obs.disconnect(); }
+    });
+    obs.observe(root, { childList: true, subtree: true });
+  })();
+</script>
 </body>
 </html>
