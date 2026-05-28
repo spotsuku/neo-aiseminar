@@ -4850,7 +4850,7 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
 
 /* Hero banner — emphasize the partner labels with vermilion accent */
 .hb-sub > span:not(.hb-x):not(.hb-sub-tail) {
-  color: var(--vermilion) !important;
+  color: var(--text-onink) !important;
   background: rgba(29,143,209,0.10) !important;
   border-left: 2px solid var(--vermilion) !important;
   font-weight: 700 !important;
