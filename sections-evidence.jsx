@@ -6,6 +6,7 @@ function Evidence() {
       id: "expense-dash",
       slot: "case-expense-dash",
       placeholder: "プロジェクト別経費ダッシュボードのスクリーンショット",
+      src: "assets/case-expense-dash.png",
       industry: "プロジェクト 20件以上を並行管理",
       scale: "",
       app: "社内プロジェクト別 経費可視化ダッシュボード",
@@ -18,6 +19,7 @@ function Evidence() {
       id: "fin-decisions",
       slot: "case-fin-decisions",
       placeholder: "財務諸表ダッシュボードのスクリーンショット",
+      src: "assets/case-fin-decisions.png",
       industry: "複数事業を経営",
       scale: "",
       app: "財務諸表を事業別に可視化／意思決定の迅速化",
@@ -52,6 +54,7 @@ function Evidence() {
                   id={c.slot}
                   shape="rect"
                   placeholder={c.placeholder}
+                  src={c.src}
                 ></image-slot>
                 <div className="case-image-overlay">
                   <span className="case-num">CASE 0{i + 1}</span>
