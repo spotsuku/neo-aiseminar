@@ -29,14 +29,16 @@
 <script type="text/babel" src="app.jsx"></script>
 
 <script>
-  // BudouX: insert <wbr> at natural Japanese phrase boundaries so
-  // text-wrap: balance / pretty break at human-readable positions.
+  // BudouX: insert <wbr> at natural Japanese phrase boundaries in
+  // free-flowing body text. Skip display headings — they use manual
+  // nowrap chunks (.under-strong, .st-line, .tt-line, inline white-space)
+  // that <wbr> would override, producing breaks mid-phrase.
   // React renders via Babel after DOMContentLoaded, so we wait for the
   // first heading to appear before applying.
   (function initBudouX() {
     if (typeof BudouXJa === 'undefined') return setTimeout(initBudouX, 60);
     var parser = BudouXJa.loadDefaultJapaneseParser();
-    var selector = '.display, .hero-headline, .lede, .essence-quote, .cc-text, .midcta-title, .midcta-sub, .hero-question p, .hps-text, .hob-text, .hb-sub, .rb-title, .rb-text, .hob-title';
+    var selector = '.lede, .essence-quote, .cc-text, .midcta-sub, .hps-text, .hob-text, .rb-text, .hero-lede';
     function apply() {
       document.querySelectorAll(selector).forEach(function (el) {
         if (el.dataset.budoux === '1') return;
@@ -45,10 +47,10 @@
       });
     }
     var root = document.getElementById('root');
-    if (root && root.querySelector('.hero-headline, .display')) { apply(); return; }
+    if (root && root.querySelector('.lede, .essence-quote')) { apply(); return; }
     if (!root) return;
     var obs = new MutationObserver(function () {
-      if (root.querySelector('.hero-headline, .display')) { apply(); obs.disconnect(); }
+      if (root.querySelector('.lede, .essence-quote')) { apply(); obs.disconnect(); }
     });
     obs.observe(root, { childList: true, subtree: true });
   })();
