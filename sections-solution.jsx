@@ -101,6 +101,7 @@ function Solution() {
                 id="workshop-photo"
                 shape="rect"
                 placeholder="ワークショップ風景の写真"
+                src="assets/workshop-photo.jpg"
               ></image-slot>
             </div>
             <div className="hob-body">
