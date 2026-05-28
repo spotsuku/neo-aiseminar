@@ -3376,16 +3376,16 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
   display: block;
 }
 .hero-headline .accent-mark {
-  display: inline;
-  white-space: normal;
+  display: inline-block;
+  white-space: nowrap;
   text-decoration: line-through;
   text-decoration-color: var(--vermilion);
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: none;
 }
 .hero-headline .under-strong {
-  display: inline;
-  white-space: normal;
+  display: inline-block;
+  white-space: nowrap;
   text-decoration: underline;
   text-decoration-color: var(--vermilion);
   text-decoration-thickness: 4px;
