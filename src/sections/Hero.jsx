@@ -125,24 +125,35 @@ export function Hero() {
       </div>
 
       {/* Proof strip */}
-      <div className="relative z-10 border-t border-white/15 py-5 md:py-8 px-5 md:px-10">
-        <div className="mx-auto max-w-wrap flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
-          <span className="font-en uppercase tracking-[0.28em] text-[11px] text-text-onink-mute">
-            Track Record
-          </span>
-          <p className="font-mincho text-text-onink text-[15px] md:text-[20px] leading-tight">
-            累計受講者数
-            <span className="text-vermilion font-bold mx-1.5 text-[22px] md:text-[28px] align-baseline">
+      <div className="relative z-10 border-t border-white/15 py-6 md:py-10 px-6 md:px-10">
+        <div className="mx-auto max-w-wrap flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-8">
+          <div className="flex flex-col gap-1">
+            <span className="font-en uppercase tracking-[0.32em] text-[10px] md:text-[12px] text-vermilion font-bold">
+              Track Record
+            </span>
+            <span className="text-text-onink-mute text-[12px] md:text-[14px] font-jp">
+              上場企業・地方テレビ局を中心に
+            </span>
+          </div>
+
+          <div className="flex items-baseline gap-3 md:gap-4 flex-wrap">
+            <span className="font-mincho text-text-onink-mute text-[14px] md:text-[18px]">
+              累計受講者数
+            </span>
+            <span className="font-en-serif text-vermilion font-medium leading-none text-[64px] md:text-[clamp(72px,8vw,128px)] tracking-tight">
               900
             </span>
-            名の
-            <span className="underline decoration-vermilion decoration-2 underline-offset-4">
+            <span className="font-mincho text-text-onink text-[18px] md:text-[24px] font-bold">
+              名 突破
+            </span>
+          </div>
+
+          <div className="font-mincho text-text-onink text-[14px] md:text-[18px] leading-tight md:text-right">
+            <span className="underline decoration-vermilion decoration-2 underline-offset-4 font-bold">
               AI研修
             </span>
-          </p>
-          <span className="text-text-onink-mute text-[12px] md:text-[13px] font-jp">
-            上場企業・地方テレビ局を中心に
-          </span>
+            の確かな実績
+          </div>
         </div>
       </div>
     </section>
