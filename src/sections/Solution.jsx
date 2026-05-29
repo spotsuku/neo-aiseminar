@@ -106,7 +106,7 @@ export function Solution() {
           社長やDX推進責任者である経営層が、業務にAIを組み込んだ姿を体感し、
           自分の手で業務を変えるツールをAIで自動構築する研修です。
           <strong className="text-ink font-semibold">「何ができ、何が社内を変える鍵なのか」</strong>——
-          業務への組み込みを判断する目を、2日間で養います。
+          AIに投資判断する目を、2週間で養います。
         </Lede>
       </div>
 
