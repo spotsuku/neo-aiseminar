@@ -97,9 +97,12 @@ export function Hero() {
           {/* Content — second on mobile, left on desktop */}
           <div className="md:order-1 flex flex-col min-w-0">
             {/* Lede (headline now lives in the banner above) */}
-            <p className="font-mincho font-bold text-text-onink leading-[1.7] text-[clamp(18px,5vw,22px)] md:text-[clamp(20px,1.8vw,26px)] mb-6 md:mb-8 break-keep">
+            <p className="font-mincho font-bold text-text-onink leading-[1.4] tracking-tight text-[clamp(22px,6.4vw,32px)] md:text-[clamp(28px,2.8vw,44px)] mb-6 md:mb-10 break-keep">
               いち早くAIを業務に組み込んだ会社が
-              <span className="text-vermilion">成功する時代</span>です。
+              <span className="text-vermilion underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:underline-offset-[10px]">
+                成功する時代
+              </span>
+              です。
             </p>
 
             {/* CTAs */}
