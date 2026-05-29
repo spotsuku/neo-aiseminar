@@ -52,8 +52,23 @@ export function Solution() {
           <span className="block font-en uppercase tracking-[0.32em] text-vermilion text-[13px] md:text-sm font-medium mb-4 md:mb-5">
             AIリスキリングキャンプ
           </span>
+
+          {/* 3-step path leading into the headline */}
+          <ol className="flex flex-col gap-2.5 md:gap-3 mb-6 md:mb-8">
+            {["AI最先端を学習", "2週間の社内実践", "リスク対策"].map((step, i) => (
+              <li key={i} className="flex items-baseline gap-3 md:gap-4">
+                <span className="font-en-serif italic text-vermilion text-[22px] md:text-[28px] font-medium leading-none shrink-0">
+                  {i + 1}.
+                </span>
+                <span className="font-mincho font-bold text-ink text-[17px] md:text-[22px] leading-tight">
+                  {step}
+                </span>
+              </li>
+            ))}
+          </ol>
+
           <Display size="lg">
-            AI最先端を学習 → 2週間の社内実践 → リスク対策で、 「AIを業務に組み込んだ姿」を自分の手で作りきる。
+            「AIを業務に組み込んだ姿」を自分の手で作りきる。
           </Display>
         </div>
         <Lede className="md:pt-3 min-w-0">
