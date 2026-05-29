@@ -39,9 +39,9 @@ export function Eyebrow({ children, onDark = false }) {
 
 export function Display({ size = "lg", children, className = "" }) {
   const sizeClasses = {
-    xl: "text-[clamp(26px,7.5vw,38px)] md:text-[clamp(36px,5.6vw,76px)] leading-[1.3]",
-    lg: "text-[clamp(22px,6.4vw,30px)] md:text-[clamp(30px,4vw,54px)] leading-[1.35]",
-    md: "text-[clamp(19px,5.2vw,26px)] md:text-[clamp(24px,2.6vw,38px)] leading-[1.4]",
+    xl: "text-[clamp(30px,8vw,44px)] md:text-[clamp(44px,6vw,84px)] leading-[1.25]",
+    lg: "text-[clamp(26px,7vw,38px)] md:text-[clamp(36px,4.6vw,62px)] leading-[1.3]",
+    md: "text-[clamp(22px,5.8vw,32px)] md:text-[clamp(28px,3vw,44px)] leading-[1.35]",
   }[size];
   // text-balance evens out line lengths; break-keep stops JP wrapping
   // mid-phrase so we don't get one-character orphan lines.
@@ -84,13 +84,13 @@ export function Connector({ num, en, jp, onDark = false }) {
       }`}
     >
       <div
-        className={`flex flex-col md:flex-row md:items-center gap-2 md:gap-5 font-en uppercase tracking-[0.2em] md:tracking-[0.28em] text-[11px] md:text-xs ${
+        className={`flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5 font-en uppercase tracking-[0.2em] sm:tracking-[0.28em] text-[11px] sm:text-xs ${
           onDark ? "text-text-onink-mute" : "text-text-secondary"
         }`}
       >
-        <div className="flex items-center gap-3 md:gap-5 min-w-0">
+        <div className="flex items-center gap-3 sm:gap-5 min-w-0">
           <span
-            className={`font-en-serif italic normal-case tracking-normal text-[20px] md:text-[26px] font-medium shrink-0 ${
+            className={`font-en-serif italic normal-case tracking-normal text-[22px] sm:text-[28px] font-medium shrink-0 ${
               onDark ? "text-text-onink" : "text-ink"
             }`}
           >
@@ -99,7 +99,7 @@ export function Connector({ num, en, jp, onDark = false }) {
           <span className="truncate">{en}</span>
         </div>
         <span
-          className={`hidden md:block flex-1 min-w-6 h-[1px] ${
+          className={`hidden sm:block flex-1 min-w-6 h-[1px] ${
             onDark ? "bg-white/15" : "bg-ink/10"
           }`}
         />

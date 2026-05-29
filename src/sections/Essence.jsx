@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Section, Connector, Eyebrow, Under } from "../components/primitives.jsx";
+import { Section, Connector, Display, Eyebrow, Under } from "../components/primitives.jsx";
 
 const STEPS = [
   {
@@ -44,11 +44,10 @@ export function Essence() {
 
       <Eyebrow>本当の意味で「AIを活用できている」状態とは</Eyebrow>
 
-      <h2 className="font-mincho font-bold text-ink text-[clamp(22px,5.8vw,32px)] md:text-[clamp(28px,3.4vw,46px)] leading-[1.55] tracking-wide mt-6 md:mt-8 max-w-4xl">
+      <Display size="lg" className="text-ink mt-6 md:mt-8 max-w-4xl">
         業務<Under>そのもの</Under>にAIを組み込むこと。
-        <br />
         そのとき初めて、会社は本当の意味でAIを活用している状態になります。
-      </h2>
+      </Display>
 
       <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-8 md:gap-14 items-center">
         <p className="font-mincho text-text-secondary text-[16px] md:text-[20px] leading-[1.95]">
@@ -58,7 +57,7 @@ export function Essence() {
           <br />
           出せるのは——
         </p>
-        <p className="font-mincho text-ink text-[24px] md:text-[clamp(28px,3vw,42px)] font-bold leading-tight">
+        <p className="font-mincho text-ink text-[clamp(28px,7.4vw,40px)] md:text-[clamp(34px,4vw,56px)] font-bold leading-tight tracking-tight">
           社長・
           <br />
           DX推進責任者である
@@ -86,7 +85,7 @@ export function Essence() {
         ))}
       </div>
 
-      <p className="mt-16 md:mt-24 font-mincho text-ink text-[18px] md:text-[clamp(20px,2.2vw,28px)] leading-[1.95] font-bold">
+      <p className="mt-16 md:mt-24 font-mincho text-ink text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.6vw,36px)] leading-[1.7] font-bold break-keep text-balance">
         経営者が変わらなければ、会社は変わらない。
         <br />
         <span className="text-vermilion">経営者がAIで何ができるかを体感していなければ、何も始まらない。</span>

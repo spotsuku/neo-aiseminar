@@ -53,9 +53,7 @@ export function Solution() {
             AIリスキリングキャンプ
           </span>
           <Display size="lg">
-            <span className="block">AI最先端を学習 → 2週間の社内実践 → リスク対策で、</span>
-            <span className="block">「AIを業務に組み込んだ姿」を</span>
-            <span className="block">自分の手で作りきる。</span>
+            AI最先端を学習 → 2週間の社内実践 → リスク対策で、 「AIを業務に組み込んだ姿」を自分の手で作りきる。
           </Display>
         </div>
         <Lede className="md:pt-3 min-w-0">
