@@ -4918,3 +4918,226 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
 @media (max-width: 960px) {
   .sec-split { grid-template-columns: 1fr; gap: 20px; }
 }
+
+
+/* ============================================================
+   Mobile responsive overrides (≤ 768px)
+   Single block at end-of-file so it wins the cascade against the
+   many desktop rules sprinkled above. Addresses 8 reported issues:
+   1) hero meta row wrapping
+   2) hero excess top padding / forced 100vh
+   3) reason-band (01/02/03) staying 2-col
+   4) essence-decision (社長・DX推進責任者) grid breaking layout
+   5) case-card image / KPI sizing
+   6) curriculum DAY/INTERVAL spacing
+   7) midcta / cta-block padding + buttons
+   8) tuition-block / ref-grid sizing
+   ============================================================ */
+@media (max-width: 768px) {
+  /* ── Section gutters ─────────────────────────────────────── */
+  .section,
+  .midcta,
+  .hero-wrap {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .wrap { padding-inline: 0 !important; }
+
+  /* ── Buttons: full width, stacked ─────────────────────────── */
+  .btn { width: 100%; justify-content: center; text-align: center; }
+  .hero-cta-row,
+  .cta-buttons,
+  .midcta-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  /* ── (1) Hero meta row ───────────────────────────────────── */
+  .hero-top {
+    flex-wrap: wrap !important;
+    gap: 8px 14px !important;
+    align-items: flex-start !important;
+    margin-bottom: 16px !important;
+  }
+  .hero-meta {
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    line-height: 1.6 !important;
+  }
+  .hero-meta .row { gap: 10px !important; flex-wrap: wrap !important; }
+  .hero-meta[style*="text-align"] { text-align: left !important; }
+
+  /* ── (2) Hero padding — first view shows headline + CTA ──── */
+  .hero {
+    min-height: auto !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  .hero-wrap {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  .hero-banner {
+    margin: 4px 0 20px !important;
+    padding: 10px 0 16px !important;
+  }
+  .hero-question { margin-bottom: 18px !important; }
+  .hero-headline { font-size: clamp(22px, 6.6vw, 30px) !important; margin-bottom: 18px !important; }
+  .hero-lede { font-size: 14px !important; line-height: 1.85 !important; margin-bottom: 22px !important; }
+
+  /* ── (3) Reason band (01/02/03) — force single column ───── */
+  .reason-band {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 32px 20px !important;
+  }
+  .rb-num-col {
+    position: static !important;
+    padding-left: 0 !important;
+  }
+  .rb-num-col::before { display: none !important; }
+  .rb-num {
+    font-size: 80px !important;
+    margin-top: 0 !important;
+    padding-left: 0 !important;
+    line-height: 1 !important;
+  }
+  .rb-num-label { padding-left: 0 !important; }
+  .rb-title { font-size: clamp(20px, 5.6vw, 26px) !important; }
+  .rb-text { font-size: 14.5px !important; line-height: 1.9 !important; }
+
+  /* ── (4) Essence decision (社長・DX推進責任者) ────────────── */
+  .essence-decision {
+    display: block !important;
+    border-top: 1px solid var(--ink) !important;
+    padding: 28px 0 0 !important;
+  }
+  .essence-decision .ed-text,
+  .essence-decision .ed-answer {
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  .essence-decision .ed-text {
+    font-size: min(7vw, 26px) !important;
+    line-height: 1.7 !important;
+    margin-bottom: 18px !important;
+  }
+  .essence-decision .ed-answer {
+    font-size: min(9vw, 38px) !important;
+    line-height: 1.4 !important;
+    padding-top: 14px !important;
+    border-top: 1px solid var(--line) !important;
+  }
+  .essence-decision .ed-answer .accent {
+    font-size: 1.15em;
+  }
+
+  /* ── (5) Case study cards ────────────────────────────────── */
+  .case-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .case-card { padding: 0 !important; }
+  .case-image image-slot,
+  .case-grid .case-card:nth-child(1) .case-image image-slot,
+  .case-grid .case-card:nth-child(2) .case-image image-slot {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+  .case-body { padding: 20px 16px !important; }
+  .case-industry { font-size: 12px !important; }
+  .case-app { font-size: 18px !important; line-height: 1.5 !important; }
+  .case-desc { font-size: 14px !important; line-height: 1.8 !important; }
+  .case-kpi {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+  .case-kpi-row { flex: 1; }
+  .case-kpi-row .lab { font-size: 11px !important; }
+  .case-kpi-row .val { font-size: 16px !important; }
+  .case-kpi-arrow { transform: rotate(-90deg); font-size: 14px !important; }
+  .case-image-hint { display: none !important; }
+
+  /* ── (6) Curriculum DAY 1 / INTERVAL / DAY 2 ─────────────── */
+  .day-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    margin-top: 8px !important;
+  }
+  .day-card {
+    padding: 24px 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .day-tag { gap: 4px !important; }
+  .day-tag-word { font-size: 11px !important; letter-spacing: 0.24em !important; }
+  .day-tag-num,
+  .interval-num { font-size: 64px !important; line-height: 1 !important; }
+  .interval-tag { justify-content: center !important; text-align: center !important; }
+  .interval-card { text-align: center; }
+  .interval-card .day-tag { justify-content: center !important; }
+  .day-h,
+  .interval-h { font-size: 18px !important; line-height: 1.55 !important; }
+  .day-card ul { padding-left: 18px !important; }
+  .day-card li { font-size: 15px !important; line-height: 1.8 !important; }
+  .day-deliverables { padding: 18px 16px !important; }
+
+  /* ── (7) CTA blocks (midcta + cta-block) ─────────────────── */
+  .midcta { padding: 48px 20px !important; }
+  .midcta-eyebrow { font-size: 11px !important; }
+  .midcta-title { font-size: min(7vw, 28px) !important; line-height: 1.5 !important; }
+  .midcta-sub { font-size: 14px !important; line-height: 1.85 !important; }
+
+  .cta-block {
+    padding: 48px 20px !important;
+    margin-inline: -20px !important;
+  }
+  .cta-block h2 { font-size: min(7vw, 28px) !important; line-height: 1.5 !important; }
+  .cta-block .btn,
+  .midcta-actions .btn,
+  .hero-cta-row .btn {
+    width: 100% !important;
+    padding: 16px 20px !important;
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── (8) Tuition / ROI pricing ───────────────────────────── */
+  .tuition-block {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: 32px 20px !important;
+    margin-top: 32px !important;
+  }
+  .tuition-num { font-size: clamp(36px, 10vw, 56px) !important; }
+  .tuition-tax { font-size: 13px !important; }
+  .tuition-notes p { font-size: 13.5px !important; line-height: 1.85 !important; }
+
+  .ref-outsource { padding: 24px 18px !important; margin-top: 24px !important; }
+  .ref-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .ref-item {
+    padding: 14px 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+  }
+  .ref-item:last-child { border-bottom: none !important; }
+  .ref-num { font-size: clamp(22px, 6.5vw, 32px) !important; }
+  .ref-unit { font-size: 12px !important; text-align: right !important; }
+  .ref-foot { font-size: 13.5px !important; margin-top: 12px !important; }
+
+  /* ── Common: force 2-col grids to stack ──────────────────── */
+  .sec-split,
+  .trust-head,
+  .hero-split { grid-template-columns: 1fr !important; }
+}
