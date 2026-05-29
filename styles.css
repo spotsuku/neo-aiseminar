@@ -2785,13 +2785,19 @@ body::before { content: none; } /* no grain on clean Chatwork-style surfaces */
 
 /* ───── Section 4 · Reason bands ──────────────────────────── */
 .reason-stack { border-top: none; }
+@media (min-width: 769px) {
+  .reason-band {
+    grid-template-columns: minmax(220px, 30%) 1fr;
+    align-items: start;
+    padding: clamp(80px, 12vh, 140px) 0;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: visible;
+  }
+}
 .reason-band {
-  grid-template-columns: minmax(220px, 30%) 1fr;
-  align-items: start;
-  padding: clamp(80px, 12vh, 140px) 0;
   border-bottom: 1px solid var(--line);
   position: relative;
-  overflow: visible;
 }
 .reason-band:last-child { border-bottom: none; }
 .rb-num-col {
