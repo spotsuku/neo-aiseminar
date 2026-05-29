@@ -85,8 +85,8 @@ export function Hero() {
             {/* Live build console — now visible on mobile too, with caption */}
             <div>
               <HeroConsole />
-              <p className="mt-3 md:mt-4 font-jp text-[12px] md:text-[13px] leading-relaxed text-text-onink-mute">
-                <span className="text-text-onink font-semibold">
+              <p className="mt-4 md:mt-5 font-jp text-[14px] md:text-[clamp(15px,1.2vw,18px)] leading-[1.7] text-text-onink-mute">
+                <span className="text-text-onink font-bold underline decoration-vermilion decoration-2 underline-offset-4">
                   全くAIが分からなくても
                 </span>
                 、1日でこうしたシステムは構築できます。
@@ -97,7 +97,7 @@ export function Hero() {
           {/* Content — second on mobile, left on desktop */}
           <div className="md:order-1 flex flex-col min-w-0">
             {/* Lede (headline now lives in the banner above) */}
-            <p className="font-mincho font-bold text-text-onink leading-[1.4] tracking-tight text-[clamp(22px,6.4vw,32px)] md:text-[clamp(28px,2.8vw,44px)] mb-6 md:mb-10 break-keep">
+            <p className="font-mincho font-bold text-text-onink leading-[1.45] tracking-tight text-[clamp(20px,5.6vw,28px)] md:text-[clamp(26px,2.6vw,40px)] mb-6 md:mb-10">
               いち早くAIを業務に組み込んだ会社が
               <span className="text-vermilion underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:underline-offset-[10px]">
                 成功する時代
