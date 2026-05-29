@@ -38,9 +38,11 @@ export function Hero() {
             <span className="font-en text-[11px] md:text-sm tracking-[0.2em] md:tracking-[0.28em] text-vermilion font-medium uppercase">
               Field-tested AX Program
             </span>
-            <h2 className="font-mincho font-bold text-text-onink text-[clamp(26px,7.6vw,40px)] md:text-[clamp(40px,7vw,96px)] leading-tight md:tracking-wider break-keep">
-              現場実感が湧くAX研修
-            </h2>
+            <h1 className="font-mincho font-bold text-text-onink text-[clamp(28px,8vw,44px)] md:text-[clamp(44px,6.4vw,92px)] leading-[1.25] md:tracking-wider break-keep">
+              本物の<Under>現場実感</Under>が湧く
+              <br />
+              AI活用を。
+            </h1>
 
             {/* Partnership — emphasized */}
             <div className="mt-5 md:mt-7">
@@ -94,14 +96,8 @@ export function Hero() {
 
           {/* Content — second on mobile, left on desktop */}
           <div className="md:order-1 flex flex-col min-w-0">
-            {/* Headline */}
-            <h1 className="font-mincho font-bold text-text-onink tracking-tight leading-[1.3] text-[clamp(26px,7.4vw,38px)] md:text-[clamp(34px,4.2vw,58px)] mb-5 md:mb-7 break-keep">
-              <span className="block">本物の<Under>現場実感</Under></span>
-              <span className="block">が湧くAI活用を。</span>
-            </h1>
-
-            {/* Lede */}
-            <p className="font-mincho font-bold text-text-onink leading-[1.7] text-[clamp(16px,4.6vw,20px)] md:text-[clamp(18px,1.6vw,24px)] mb-6 md:mb-8 break-keep">
+            {/* Lede (headline now lives in the banner above) */}
+            <p className="font-mincho font-bold text-text-onink leading-[1.7] text-[clamp(18px,5vw,22px)] md:text-[clamp(20px,1.8vw,26px)] mb-6 md:mb-8 break-keep">
               いち早くAIを業務に組み込んだ会社が
               <span className="text-vermilion">成功する時代</span>です。
             </p>
