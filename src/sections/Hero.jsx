@@ -80,8 +80,15 @@ export function Hero() {
                 実際の研修風景
               </figcaption>
             </figure>
-            <div className="hidden md:block">
+            {/* Live build console — now visible on mobile too, with caption */}
+            <div>
               <HeroConsole />
+              <p className="mt-3 md:mt-4 font-jp text-[12px] md:text-[13px] leading-relaxed text-text-onink-mute">
+                <span className="text-text-onink font-semibold">
+                  全くAIが分からなくても
+                </span>
+                、1日でこうしたシステムは構築できます。
+              </p>
             </div>
           </div>
 
