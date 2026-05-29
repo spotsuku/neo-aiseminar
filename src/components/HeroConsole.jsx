@@ -1,3 +1,4 @@
+import * as React from "react";
 /* Hero live console + cycling app preview.
    Streams realistic build logs (bottom → top) while an emerging
    "app preview card" materializes on top, cycling through 3 builds. */
@@ -277,4 +278,4 @@ function HeroConsole() {
   );
 }
 
-Object.assign(window, { HeroConsole, ExpensePreview, FaxPreview, KpiPreview });
+export { HeroConsole, ExpensePreview, FaxPreview, KpiPreview };

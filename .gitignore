@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.vite/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.log
+
+# Local-only state — sidecar for image-slot drops
+.image-slots.state.json

@@ -1,0 +1,17 @@
+/* HeroConsole still uses hand-rolled CSS (complex live-build animation).
+   Every other section is pure Tailwind utilities. */
+@import "./hero-console.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Defensive: clip any unexpected horizontal overflow rather than
+   letting it cause a scrollbar on mobile. */
+html, body { overflow-x: hidden; }
+
+/* Hero marquee keyframe — Tailwind doesn't ship a marquee animation. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
