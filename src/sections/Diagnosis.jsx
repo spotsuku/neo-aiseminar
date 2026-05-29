@@ -41,8 +41,9 @@ export function Diagnosis() {
         <Connector num="03" en="Self Diagnosis" onDark />
 
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-mincho font-bold text-text-onink text-[clamp(22px,5.6vw,30px)] md:text-[clamp(28px,3vw,42px)] leading-snug text-balance mb-8 md:mb-12">
-            あなたの会社は、こうなっていませんか？
+          <h2 className="font-mincho font-bold text-text-onink text-[clamp(22px,5.6vw,30px)] md:text-[clamp(28px,3vw,42px)] leading-snug mb-8 md:mb-12">
+            <span className="whitespace-nowrap">あなたの会社は、</span>
+            <span className="whitespace-nowrap">こうなっていませんか？</span>
           </h2>
           <ul className="flex flex-col gap-3 md:gap-4 mb-10 md:mb-14">
             {ITEMS.map((t, i) => {

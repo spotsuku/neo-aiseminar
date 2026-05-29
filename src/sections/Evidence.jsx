@@ -114,7 +114,18 @@ export function Evidence() {
         ))}
       </div>
 
-      <div className="mt-12 md:mt-20 bg-ink text-text-onink p-6 md:p-10 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-6 md:gap-8 items-center">
+      <div className="mt-12 md:mt-20 bg-ink text-text-onink p-6 md:p-10">
+        {/* Context — clarifies what's being compared */}
+        <div className="mb-6 md:mb-8 pb-5 md:pb-7 border-b border-white/15">
+          <span className="block font-en uppercase tracking-[0.32em] text-[10px] md:text-[12px] text-vermilion font-bold mb-2">
+            ─── Cost of Building a Business Tool
+          </span>
+          <h3 className="font-mincho text-text-onink text-[18px] md:text-[clamp(20px,2vw,28px)] font-bold leading-tight">
+            業務システム・アプリ開発の<span className="text-vermilion">「これまで」と「これから」</span>
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-6 md:gap-8 items-center">
         <div className="flex flex-col gap-2">
           <span className="font-en uppercase tracking-[0.28em] text-[11px] text-text-onink-mute">
             これまでの常識
@@ -143,6 +154,7 @@ export function Evidence() {
           <span className="text-text-onink-mute text-[12px] md:text-[13px] font-jp">
             経営者の手から、業務を変えるツールが立ち上がる。
           </span>
+        </div>
         </div>
       </div>
     </Section>
