@@ -40,8 +40,7 @@ export function Hero() {
             </span>
             <h1 className="font-mincho font-bold text-text-onink text-[clamp(28px,8vw,44px)] md:text-[clamp(44px,6.4vw,92px)] leading-[1.25] md:tracking-wider">
               日々の<Under>業務課題</Under>を解決する
-              <br />
-              実践型AI研修
+              <span className="whitespace-nowrap">実践型AI研修</span>
             </h1>
 
             {/* Partnership — clean headline form (matches the CTA section) */}
