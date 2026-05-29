@@ -36,8 +36,8 @@ function Evidence() {
 
         <div className="evidence-head">
           <h2 className="display lg">
-            プログラミング未経験の経営者が、<br />
-            <span className="under">自分の手で</span>業務を変えはじめています。
+            プログラミング未経験の<span style={{ whiteSpace: 'nowrap' }}>経営者が、</span><br />
+            <span className="under">自分の手で</span>業務を変え<span style={{ whiteSpace: 'nowrap' }}>はじめています。</span>
           </h2>
           <p className="lede">
             ある経営者は、2ヶ月でアプリを10個自作し、社内の業務を次々と自動化しはじめました。
@@ -107,7 +107,7 @@ function Evidence() {
           <div className="sa-row sa-now">
             <span className="sa-tag">いまの現実</span>
             <p className="sa-text">
-              <span className="sa-big">日本語の指示だけで、1週間・数万円。</span>
+              <span className="sa-big">日本語の指示だけで、1週間・<span style={{ whiteSpace: 'nowrap' }}>数万円。</span></span>
               <span className="sa-sub">経営者の手から、業務を変えるツールが立ち上がる。</span>
             </p>
           </div>
