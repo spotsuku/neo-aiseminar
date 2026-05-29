@@ -6,7 +6,7 @@ export function ROI() {
     <Section label="07 ROI" tone="soft">
       <Connector num="07" en="Return on Investment" jp="投資価値" />
 
-      <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-8 md:gap-14 mb-12 md:mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-8 md:gap-14 mb-12 md:mb-16">
         <Display size="lg">
           <Under>初年度で受講費が回収できる</Under>
           <br />
@@ -18,7 +18,7 @@ export function ROI() {
         </Lede>
       </div>
 
-      <div className="bg-paper-card border border-ink/8 p-6 md:p-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 md:gap-12 items-center">
+      <div className="bg-paper-card border border-ink/8 p-6 md:p-12 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 md:gap-12 items-center">
         <div>
           <div className="font-en uppercase tracking-[0.32em] text-[11px] text-text-muted mb-3">
             受講料 ／ 1名

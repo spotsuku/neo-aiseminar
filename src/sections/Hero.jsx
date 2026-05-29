@@ -30,34 +30,34 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto w-full max-w-wrap flex-1 flex flex-col px-5 md:px-10 pt-6 pb-6 md:pt-28 md:pb-14">
-        {/* Meta row */}
-        <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2 mb-4 md:mb-8 font-en uppercase tracking-[0.18em] md:tracking-[0.32em] text-[11px] text-text-onink-mute leading-relaxed">
-          <div className="flex flex-wrap items-center gap-2 md:gap-4">
+        {/* Meta row — stacks on mobile so JP text doesn't collide with English */}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1.5 md:gap-4 mb-4 md:mb-8 font-en uppercase tracking-[0.08em] md:tracking-[0.28em] text-[10px] md:text-[11px] text-text-onink-mute leading-relaxed">
+          <div className="flex flex-wrap items-center gap-x-2.5 md:gap-x-4 gap-y-1">
             <span>AIリスキリングキャンプ</span>
             <span className="w-1 h-1 rounded-full bg-vermilion" />
             <span>2026 / Cohort 04</span>
           </div>
-          <div className="text-left md:text-right">For Executives &amp; DX Leaders</div>
+          <div className="md:text-right">For Executives &amp; DX Leaders</div>
         </div>
 
         {/* Banner: Field-tested AX Program / 現場実感が湧くAX研修 */}
         <div className="relative border-b border-white/15 mb-5 md:mb-7 pb-4 md:pb-7">
           <div className="flex flex-col gap-1 md:gap-2">
-            <span className="font-en text-xs md:text-sm tracking-[0.28em] text-vermilion font-medium uppercase">
+            <span className="font-en text-[11px] md:text-sm tracking-[0.2em] md:tracking-[0.28em] text-vermilion font-medium uppercase">
               Field-tested AX Program
             </span>
-            <h2 className="font-mincho font-bold text-text-onink text-[clamp(28px,9vw,40px)] md:text-[clamp(40px,7vw,96px)] leading-tight tracking-wider whitespace-nowrap">
+            <h2 className="font-mincho font-bold text-text-onink text-[clamp(26px,7.6vw,40px)] md:text-[clamp(40px,7vw,96px)] leading-tight md:tracking-wider break-keep">
               現場実感が湧くAX研修
             </h2>
-            <p className="flex flex-wrap items-baseline gap-2 md:gap-3 font-mincho font-bold text-text-onink tracking-wider text-[14px] md:text-[clamp(18px,1.8vw,26px)] mt-2 md:mt-3 leading-relaxed">
-              <span className="px-3 md:px-4 py-1 md:py-1.5 border-l-2 border-vermilion bg-vermilion/10 font-bold">
+            <p className="flex flex-wrap items-center gap-x-2 md:gap-x-3 gap-y-2 font-mincho font-bold text-text-onink tracking-wide text-[13px] md:text-[clamp(18px,1.8vw,26px)] mt-2 md:mt-3 leading-relaxed">
+              <span className="px-2.5 md:px-4 py-1 md:py-1.5 border-l-2 border-vermilion bg-vermilion/10 font-bold">
                 東大発AIスタートアップ
               </span>
-              <span className="font-en-serif italic text-vermilion text-[1.3em]">×</span>
-              <span className="px-3 md:px-4 py-1 md:py-1.5 border-l-2 border-vermilion bg-vermilion/10 font-bold">
+              <span className="font-en-serif italic text-vermilion text-[1.6em] leading-none">×</span>
+              <span className="px-2.5 md:px-4 py-1 md:py-1.5 border-l-2 border-vermilion bg-vermilion/10 font-bold">
                 次世代リーダー育成のプロ
               </span>
-              <span className="font-jp text-[0.75em] text-text-onink-mute font-medium">が開発</span>
+              <span className="font-jp text-[0.85em] text-text-onink-mute font-medium">が開発</span>
             </p>
           </div>
         </div>

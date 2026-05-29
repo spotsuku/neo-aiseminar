@@ -47,7 +47,7 @@ export function Solution() {
     <Section id="course" label="06 Solution" tone="light">
       <Connector num="06" en="The Program" jp="現場実践型の研修プログラム" />
 
-      <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-8 md:gap-14 mb-12 md:mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-8 md:gap-14 mb-12 md:mb-16">
         <div>
           <span className="block font-en uppercase tracking-[0.32em] text-vermilion text-[13px] md:text-sm font-medium mb-4 md:mb-5">
             AIリスキリングキャンプ
@@ -58,12 +58,39 @@ export function Solution() {
             <span className="block">自分の手で作りきる。</span>
           </Display>
         </div>
-        <Lede className="md:pt-3">
+        <Lede className="md:pt-3 min-w-0">
           社長やDX推進責任者である経営層が、業務にAIを組み込んだ姿を体感し、
           自分の手で業務を変えるツールをAIで自動構築する研修です。
           <strong className="text-ink font-semibold">「何ができ、何が社内を変える鍵なのか」</strong>——
           業務への組み込みを判断する目を、2日間で養います。
         </Lede>
+      </div>
+
+      {/* Hands-on Workshop — standalone block between Program intro and Curriculum */}
+      <div className="mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 md:gap-12 items-center">
+        <div className="aspect-[4/3] bg-paper-soft overflow-hidden">
+          <image-slot
+            id="workshop-photo"
+            shape="rect"
+            placeholder="ワークショップ風景の写真"
+            src="assets/workshop-photo.jpg"
+          />
+        </div>
+        <div className="min-w-0">
+          <span className="font-en uppercase tracking-[0.32em] text-[11px] text-vermilion font-medium mb-3 block">
+            ─── Hands-on Workshop
+          </span>
+          <h3 className="font-mincho font-bold text-[24px] md:text-[clamp(26px,2.8vw,40px)] leading-tight mb-4 md:mb-6">
+            <Under>現場実感</Under>のある
+            <br />
+            実践型のAI研修
+          </h3>
+          <p className="text-text-secondary text-[13px] md:text-[15px] leading-[1.95] font-jp">
+            少人数のハンズオン形式で、講師が一人ひとりに伴走。
+            参加者同士で課題を持ち寄り、議論しながら、自分の業務に組み込むツールを実際に作り上げる。
+            座学ではなく「現場で動くもの」を持ち帰る、実践型の2日間です。
+          </p>
+        </div>
       </div>
 
       <div className="bg-paper-card border border-ink/8 p-6 md:p-12">
@@ -153,32 +180,6 @@ export function Solution() {
             受講期間中、<strong className="text-text-onink font-semibold">Claude アカウント</strong>
             を付与いたします。 （Day 1〜Day 2 終了まで、未来ドリル期間を含む全期間）
           </span>
-        </div>
-
-        <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
-          <div className="aspect-[4/3] bg-paper-soft overflow-hidden">
-            <image-slot
-              id="workshop-photo"
-              shape="rect"
-              placeholder="ワークショップ風景の写真"
-              src="assets/workshop-photo.jpg"
-            />
-          </div>
-          <div>
-            <span className="font-en uppercase tracking-[0.32em] text-[11px] text-vermilion font-medium mb-3 block">
-              Hands-on Workshop
-            </span>
-            <h3 className="font-mincho font-bold text-[22px] md:text-[clamp(24px,2.6vw,38px)] leading-tight mb-4 md:mb-6">
-              <Under>現場実感</Under>のある
-              <br />
-              実践型のAI研修
-            </h3>
-            <p className="text-text-secondary text-[13px] md:text-[15px] leading-[1.95] font-jp">
-              少人数のハンズオン形式で、講師が一人ひとりに伴走。
-              参加者同士で課題を持ち寄り、議論しながら、自分の業務に組み込むツールを実際に作り上げる。
-              座学ではなく「現場で動くもの」を持ち帰る、実践型の2日間です。
-            </p>
-          </div>
         </div>
 
         <div className="mt-10 md:mt-14 p-6 md:p-8 bg-paper-soft border-l-4 border-vermilion flex flex-col md:flex-row md:items-center md:justify-between gap-4">

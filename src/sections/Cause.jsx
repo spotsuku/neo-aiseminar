@@ -51,7 +51,7 @@ export function Cause() {
         {REASONS.map((r) => (
           <article
             key={r.n}
-            className="bg-paper-card border-l-[3px] border-vermilion grid grid-cols-1 md:grid-cols-[180px_1fr] gap-4 md:gap-10 p-6 md:p-10"
+            className="bg-paper-card border-l-[3px] border-vermilion grid grid-cols-1 md:grid-cols-[180px_minmax(0,1fr)] gap-4 md:gap-10 p-6 md:p-10"
           >
             <div className="flex md:flex-col items-baseline md:items-start gap-3 md:gap-2">
               <span className="font-en-serif italic text-[44px] md:text-[72px] leading-none text-vermilion font-medium">

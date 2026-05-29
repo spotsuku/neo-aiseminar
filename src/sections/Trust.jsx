@@ -38,7 +38,7 @@ export function Trust() {
         </Lede>
       </div>
 
-      <div className="bg-paper-soft p-6 md:p-10 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-8 md:gap-12 mb-12 md:mb-16">
+      <div className="bg-paper-soft p-6 md:p-10 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 md:gap-12 mb-12 md:mb-16">
         <div className="flex flex-col gap-3">
           <span className="font-en uppercase tracking-[0.32em] text-[11px] text-vermilion">
             累計受講者数

@@ -112,7 +112,7 @@ export function Evidence() {
         ))}
       </div>
 
-      <div className="mt-12 md:mt-20 bg-ink text-text-onink p-6 md:p-10 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 md:gap-8 items-center">
+      <div className="mt-12 md:mt-20 bg-ink text-text-onink p-6 md:p-10 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-6 md:gap-8 items-center">
         <div className="flex flex-col gap-2">
           <span className="font-en uppercase tracking-[0.28em] text-[11px] text-text-onink-mute">
             これまでの常識

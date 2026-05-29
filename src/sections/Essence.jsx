@@ -50,7 +50,7 @@ export function Essence() {
         そのとき初めて、会社は本当の意味でAIを活用している状態になります。
       </h2>
 
-      <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 md:gap-14 items-center">
+      <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-8 md:gap-14 items-center">
         <p className="font-mincho text-text-secondary text-[16px] md:text-[20px] leading-[1.95]">
           その意思決定と
           <br />
