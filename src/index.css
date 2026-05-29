@@ -1,7 +1,6 @@
-/* Legacy CSS still drives every section except the new Tailwind Hero.
-   Once each section is migrated to Tailwind we delete its rules from
-   legacy-styles.css; when the file is empty we drop this import. */
-@import "./legacy-styles.css";
+/* HeroConsole still uses hand-rolled CSS (complex live-build animation).
+   Every other section is pure Tailwind utilities. */
+@import "./hero-console.css";
 
 @tailwind base;
 @tailwind components;

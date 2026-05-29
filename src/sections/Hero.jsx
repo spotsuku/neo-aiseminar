@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeroConsole } from "../legacy-hero-console.jsx";
+import { HeroConsole } from "../components/HeroConsole.jsx";
 
 /**
  * Hero — Tailwind rewrite (Phase 1 sample).
@@ -14,7 +14,8 @@ export function Hero() {
   return (
     <section
       data-screen-label="01 Hero"
-      className="relative overflow-hidden bg-ink text-text-onink min-h-0 md:min-h-screen flex flex-col"
+      data-tone="dark"
+      className="relative overflow-hidden bg-ink text-text-onink min-h-0 md:min-h-screen flex flex-col pt-16 md:pt-0"
     >
       {/* Decorative bg grid (kept as a tiny inline SVG so we don't need
           a separate CSS class) */}
