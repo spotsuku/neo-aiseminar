@@ -1,0 +1,14 @@
+/* Legacy CSS still drives every section except the new Tailwind Hero.
+   Once each section is migrated to Tailwind we delete its rules from
+   legacy-styles.css; when the file is empty we drop this import. */
+@import "./legacy-styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hero marquee keyframe — Tailwind doesn't ship a marquee animation. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
