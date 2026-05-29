@@ -10,6 +10,15 @@
    letting it cause a scrollbar on mobile. */
 html, body { overflow-x: hidden; }
 
+/* image-slot ships with a fixed 240×160 host size (inline-block).
+   Override so it fills whatever parent box we give it — the section
+   uses aspect-ratio on the wrapper to control the visible frame. */
+image-slot {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* Hero marquee keyframe — Tailwind doesn't ship a marquee animation. */
 @keyframes marquee {
   from { transform: translateX(0); }
