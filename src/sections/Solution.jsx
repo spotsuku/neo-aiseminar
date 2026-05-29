@@ -117,7 +117,7 @@ export function Solution() {
               Curriculum / 学習 → 社内実践 → リスク対策
             </span>
             <span className="block font-bold text-ink text-[20px] md:text-[28px]">
-              体感し、自分の手で組み込む。
+              体感し、自分の手で創り上げる。
             </span>
           </h3>
           <div className="text-text-secondary font-jp text-[12px] md:text-[13px] leading-[1.95]">
