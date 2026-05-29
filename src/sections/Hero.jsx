@@ -29,19 +29,10 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-wrap flex-1 flex flex-col px-6 md:px-10 pt-2 pb-6 md:pt-28 md:pb-14">
-        {/* Meta row — stacks on mobile so JP text doesn't collide with English */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1.5 md:gap-4 mb-4 md:mb-8 font-en uppercase tracking-[0.08em] md:tracking-[0.28em] text-[10px] md:text-[11px] text-text-onink-mute leading-relaxed">
-          <div className="flex flex-wrap items-center gap-x-2.5 md:gap-x-4 gap-y-1">
-            <span>AIリスキリングキャンプ</span>
-            <span className="w-1 h-1 rounded-full bg-vermilion" />
-            <span>2026 / Cohort 04</span>
-          </div>
-          <div className="md:text-right">For Executives &amp; DX Leaders</div>
-        </div>
+      <div className="relative z-10 mx-auto w-full max-w-wrap flex-1 flex flex-col px-6 md:px-10 pt-4 pb-6 md:pt-28 md:pb-14">
 
         {/* Banner: Field-tested AX Program / 現場実感が湧くAX研修 */}
-        <div className="relative border-b border-white/15 mb-5 md:mb-7 pb-4 md:pb-7">
+        <div className="relative border-b border-white/15 mb-6 md:mb-8 pb-5 md:pb-8">
           <div className="flex flex-col gap-1 md:gap-2">
             <span className="font-en text-[11px] md:text-sm tracking-[0.2em] md:tracking-[0.28em] text-vermilion font-medium uppercase">
               Field-tested AX Program
@@ -49,16 +40,27 @@ export function Hero() {
             <h2 className="font-mincho font-bold text-text-onink text-[clamp(26px,7.6vw,40px)] md:text-[clamp(40px,7vw,96px)] leading-tight md:tracking-wider break-keep">
               現場実感が湧くAX研修
             </h2>
-            <p className="flex flex-wrap items-center gap-x-2 md:gap-x-3 gap-y-2 font-mincho font-bold text-text-onink tracking-wide text-[13px] md:text-[clamp(18px,1.8vw,26px)] mt-2 md:mt-3 leading-relaxed">
-              <span className="px-2.5 md:px-4 py-1 md:py-1.5 border-l-2 border-vermilion bg-vermilion/10 font-bold">
-                東大発AIスタートアップ
+
+            {/* Partnership — emphasized */}
+            <div className="mt-5 md:mt-7">
+              <span className="block font-en uppercase tracking-[0.32em] text-[10px] md:text-[12px] text-vermilion font-bold mb-3 md:mb-4">
+                ─── Strategic Partnership
               </span>
-              <span className="font-en-serif italic text-vermilion text-[1.6em] leading-none">×</span>
-              <span className="px-2.5 md:px-4 py-1 md:py-1.5 border-l-2 border-vermilion bg-vermilion/10 font-bold">
-                次世代リーダー育成のプロ
-              </span>
-              <span className="font-jp text-[0.85em] text-text-onink-mute font-medium">が開発</span>
-            </p>
+              <div className="flex flex-wrap items-center gap-x-3 md:gap-x-5 gap-y-3 font-mincho">
+                <span className="px-4 md:px-6 py-2.5 md:py-3.5 bg-vermilion/15 border-l-[3px] md:border-l-4 border-vermilion text-text-onink font-bold text-[16px] md:text-[clamp(20px,2.1vw,30px)] leading-tight tracking-wide">
+                  東大発AIスタートアップ
+                </span>
+                <span className="font-en-serif italic text-vermilion text-[32px] md:text-[clamp(36px,4vw,56px)] leading-none font-bold">
+                  ×
+                </span>
+                <span className="px-4 md:px-6 py-2.5 md:py-3.5 bg-vermilion/15 border-l-[3px] md:border-l-4 border-vermilion text-text-onink font-bold text-[16px] md:text-[clamp(20px,2.1vw,30px)] leading-tight tracking-wide">
+                  次世代リーダー育成のプロ
+                </span>
+                <span className="font-jp text-[13px] md:text-[clamp(14px,1.2vw,18px)] text-text-onink-mute font-medium">
+                  が開発
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 

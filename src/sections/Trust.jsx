@@ -83,6 +83,10 @@ export function Trust() {
             n: "01",
             logo: "assets/logo-aiken.png",
             alt: "A.I.KEN",
+            // AIKEN PNG ships with extra internal padding — give the
+            // container more vertical room so the visible mark lands
+            // at the same on-screen size as NEO below.
+            logoBox: "h-20 md:h-24",
             h: (
               <>
                 東京大学発
@@ -97,6 +101,7 @@ export function Trust() {
             n: "02",
             logo: "assets/logo-neo.png",
             alt: "NEO",
+            logoBox: "h-12 md:h-16",
             h: (
               <>
                 次世代リーダー
@@ -115,7 +120,7 @@ export function Trust() {
             <span className="font-en-serif italic text-vermilion text-[24px] md:text-[28px] font-medium">
               {p.n}
             </span>
-            <div className="h-12 md:h-14 flex items-center">
+            <div className={`${p.logoBox} flex items-center`}>
               <img src={p.logo} alt={p.alt} className="h-full w-auto object-contain" />
             </div>
             <h3 className="font-mincho font-bold text-[18px] md:text-[22px] leading-tight">
