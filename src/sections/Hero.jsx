@@ -1,5 +1,6 @@
 import * as React from "react";
 import { HeroConsole } from "../components/HeroConsole.jsx";
+import { Under } from "../components/primitives.jsx";
 
 /**
  * Hero — Tailwind rewrite (Phase 1 sample).
@@ -64,47 +65,38 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Split: headline left, photo+console right */}
-        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] gap-8 md:gap-12 items-stretch flex-1">
-          {/* Left */}
-          <div className="flex flex-col min-w-0">
-            {/* Question */}
-            <div className="relative pl-5 mb-5 md:mb-7 border-l-2 border-vermilion/60">
-              <span aria-hidden className="absolute -top-3 -left-1 font-mincho text-5xl md:text-6xl text-vermilion/40 leading-none">“</span>
-              <p className="font-mincho text-text-onink text-[clamp(18px,5.6vw,24px)] md:text-[clamp(20px,2.2vw,28px)] leading-snug">
-                <span className="block">うちの会社、</span>
-                <span className="block">
-                  本当にAI使えてるかな
-                  <span className="text-vermilion">……？</span>
-                </span>
-              </p>
+        {/* Split: content (left on desktop) + image stack (right on desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] gap-6 md:gap-12 items-stretch flex-1">
+          {/* Image — appears first on mobile (above content), right on desktop */}
+          <div className="md:order-2 flex flex-col gap-5 md:gap-7 min-w-0">
+            <figure className="relative overflow-hidden">
+              <img
+                src="assets/hero-workshop.jpg"
+                alt="AIリスキリングキャンプ — 実際の研修風景"
+                className="block w-full h-[220px] sm:h-[280px] md:h-[320px] object-cover"
+              />
+              <figcaption className="absolute left-3 bottom-3 md:left-5 md:bottom-5 flex items-center gap-2 px-3 py-1.5 bg-ink/80 text-text-onink text-xs font-jp">
+                <span className="w-1.5 h-1.5 rounded-full bg-vermilion" />
+                実際の研修風景
+              </figcaption>
+            </figure>
+            <div className="hidden md:block">
+              <HeroConsole />
             </div>
+          </div>
 
+          {/* Content — second on mobile, left on desktop */}
+          <div className="md:order-1 flex flex-col min-w-0">
             {/* Headline */}
-            <h1 className="font-mincho font-bold text-text-onink tracking-tight leading-snug text-[clamp(22px,6.6vw,30px)] md:text-[clamp(28px,3.2vw,46px)] mb-5 md:mb-7">
-              <span className="block">
-                <span className="whitespace-nowrap underline decoration-vermilion decoration-4 underline-offset-[6px] md:underline-offset-[8px]">
-                  表面的なAI活用
-                </span>
-                の時代は、
-              </span>
-              <span className="block">終わりました。</span>
-              <span className="block mt-2">
-                AIを
-                <span className="whitespace-nowrap underline decoration-vermilion decoration-4 underline-offset-[6px] md:underline-offset-[8px]">
-                  業務に組み込む
-                </span>
-                時代です。
-              </span>
+            <h1 className="font-mincho font-bold text-text-onink tracking-tight leading-[1.3] text-[clamp(26px,7.4vw,38px)] md:text-[clamp(34px,4.2vw,58px)] mb-5 md:mb-7 break-keep">
+              <span className="block">本物の<Under>現場実感</Under></span>
+              <span className="block">が湧くAI活用を。</span>
             </h1>
 
             {/* Lede */}
-            <p className="text-text-onink-mute font-jp leading-relaxed text-[14px] md:text-[clamp(15px,1.1vw,17px)] mb-6 md:mb-8">
-              経営者が変われば、会社が変わる。
-              <br />
-              <strong className="text-text-onink font-semibold">
-                2日間で、AIで会社の未来を変える経営者になる。
-              </strong>
+            <p className="font-mincho font-bold text-text-onink leading-[1.7] text-[clamp(16px,4.6vw,20px)] md:text-[clamp(18px,1.6vw,24px)] mb-6 md:mb-8 break-keep">
+              いち早くAIを業務に組み込んだ会社が
+              <span className="text-vermilion">成功する時代</span>です。
             </p>
 
             {/* CTAs */}
@@ -123,24 +115,6 @@ export function Hero() {
                 研修内容を見る
                 <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
               </a>
-            </div>
-          </div>
-
-          {/* Right — workshop photo + live build console */}
-          <div className="flex flex-col gap-5 md:gap-7 min-w-0">
-            <figure className="relative overflow-hidden">
-              <img
-                src="assets/hero-workshop.jpg"
-                alt="AIリスキリングキャンプ — 実際の研修風景"
-                className="block w-full h-auto md:h-[260px] object-cover"
-              />
-              <figcaption className="absolute left-3 bottom-3 md:left-5 md:bottom-5 flex items-center gap-2 px-3 py-1.5 bg-ink/80 text-text-onink text-xs font-jp">
-                <span className="w-1.5 h-1.5 rounded-full bg-vermilion" />
-                実際の研修風景
-              </figcaption>
-            </figure>
-            <div className="hidden md:block">
-              <HeroConsole />
             </div>
           </div>
         </div>
