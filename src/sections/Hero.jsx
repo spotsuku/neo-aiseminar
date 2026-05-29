@@ -84,7 +84,7 @@ export function Hero() {
             </figure>
             {/* Live build console — now visible on mobile too */}
             <HeroConsole />
-            <p className="font-jp text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.4vw,36px)] leading-[1.55] text-text-onink-mute font-medium">
+            <p className="font-mincho text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.4vw,36px)] leading-[1.55] text-text-onink-mute font-medium">
               <span className="text-text-onink font-bold underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:decoration-4 md:underline-offset-8">
                 全くAIが分からなくても
               </span>
