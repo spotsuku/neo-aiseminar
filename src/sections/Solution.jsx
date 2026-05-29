@@ -54,13 +54,17 @@ export function Solution() {
           </span>
 
           {/* 3-step path leading into the headline */}
-          <ol className="flex flex-col gap-2.5 md:gap-3 mb-6 md:mb-8">
-            {["AI最先端を学習", "2週間の社内実践", "リスク対策"].map((step, i) => (
-              <li key={i} className="flex items-baseline gap-3 md:gap-4">
-                <span className="font-en-serif italic text-vermilion text-[22px] md:text-[28px] font-medium leading-none shrink-0">
+          <ol className="flex flex-col gap-3 md:gap-4 mb-6 md:mb-8">
+            {[
+              "AI最先端を学習・業務アプリ開発",
+              "2週間の社内実践",
+              "リスク対策・アプリ発表",
+            ].map((step, i) => (
+              <li key={i} className="flex items-baseline gap-3 md:gap-5">
+                <span className="font-en-serif italic text-vermilion text-[28px] md:text-[40px] font-medium leading-none shrink-0">
                   {i + 1}.
                 </span>
-                <span className="font-mincho font-bold text-ink text-[17px] md:text-[22px] leading-tight">
+                <span className="font-mincho font-bold text-ink text-[20px] md:text-[28px] leading-snug break-keep">
                   {step}
                 </span>
               </li>
