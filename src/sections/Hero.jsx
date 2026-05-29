@@ -44,25 +44,16 @@ export function Hero() {
               AI活用を。
             </h1>
 
-            {/* Partnership — emphasized */}
+            {/* Partnership — clean headline form (matches the CTA section) */}
             <div className="mt-5 md:mt-7">
               <span className="block font-en uppercase tracking-[0.32em] text-[10px] md:text-[12px] text-vermilion font-bold mb-3 md:mb-4">
                 ─── Strategic Partnership
               </span>
-              <div className="flex flex-wrap items-center gap-x-3 md:gap-x-5 gap-y-3 font-mincho">
-                <span className="px-4 md:px-6 py-2.5 md:py-3.5 bg-vermilion/15 border-l-[3px] md:border-l-4 border-vermilion text-text-onink font-bold text-[16px] md:text-[clamp(20px,2.1vw,30px)] leading-tight tracking-wide">
-                  東大発AIスタートアップ
-                </span>
-                <span className="font-en-serif italic text-vermilion text-[32px] md:text-[clamp(36px,4vw,56px)] leading-none font-bold">
-                  ×
-                </span>
-                <span className="px-4 md:px-6 py-2.5 md:py-3.5 bg-vermilion/15 border-l-[3px] md:border-l-4 border-vermilion text-text-onink font-bold text-[16px] md:text-[clamp(20px,2.1vw,30px)] leading-tight tracking-wide">
-                  次世代リーダー育成のプロ
-                </span>
-                <span className="font-jp text-[13px] md:text-[clamp(14px,1.2vw,18px)] text-text-onink-mute font-medium">
-                  が開発
-                </span>
-              </div>
+              <h2 className="font-mincho font-bold text-text-onink text-[clamp(22px,6vw,30px)] md:text-[clamp(28px,3.2vw,46px)] leading-[1.5] tracking-tight">
+                リアルなビジネス現場 <span className="font-en-serif italic text-vermilion font-medium">×</span>
+                <br />
+                <span className="text-vermilion">東京大学発スタートアップ。</span>
+              </h2>
             </div>
           </div>
         </div>
