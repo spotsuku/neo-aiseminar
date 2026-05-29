@@ -99,7 +99,7 @@ export function Solution() {
           </ol>
 
           <Display size="lg">
-            「AIを業務に組み込んだ姿」を自分の手で作りきる。
+            「AIで日々の業務が変わる姿」を自分の手で創り切る。
           </Display>
         </div>
         <Lede className="md:pt-3 min-w-0">
