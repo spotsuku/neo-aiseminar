@@ -84,8 +84,8 @@ export function Hero() {
             </figure>
             {/* Live build console — now visible on mobile too */}
             <HeroConsole />
-            <p className="font-jp text-[14px] md:text-[clamp(15px,1.2vw,18px)] leading-[1.7] text-text-onink-mute">
-              <span className="text-text-onink font-bold underline decoration-vermilion decoration-2 underline-offset-4">
+            <p className="font-jp text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.4vw,36px)] leading-[1.55] text-text-onink-mute font-medium">
+              <span className="text-text-onink font-bold underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:decoration-4 md:underline-offset-8">
                 全くAIが分からなくても
               </span>
               、1日でこうしたシステムは構築できます。
