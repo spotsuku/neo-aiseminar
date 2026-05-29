@@ -47,6 +47,33 @@ export function Solution() {
     <Section id="course" label="06 Solution" tone="light">
       <Connector num="06" en="The Program" jp="現場実践型の研修プログラム" />
 
+      {/* Hands-on Workshop — moved up to sit directly under THE PROGRAM */}
+      <div className="mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 md:gap-12 items-center">
+        <div className="aspect-[4/3] bg-paper-soft overflow-hidden">
+          <image-slot
+            id="workshop-photo"
+            shape="rect"
+            placeholder="ワークショップ風景の写真"
+            src="assets/workshop-photo.jpg"
+          />
+        </div>
+        <div className="min-w-0">
+          <span className="font-en uppercase tracking-[0.32em] text-[11px] text-vermilion font-medium mb-3 block">
+            ─── Hands-on Workshop
+          </span>
+          <h3 className="font-mincho font-bold text-[24px] md:text-[clamp(26px,2.8vw,40px)] leading-tight mb-4 md:mb-6">
+            <Under>現場実感</Under>のある
+            <br />
+            実践型のAI研修
+          </h3>
+          <p className="text-text-secondary text-[13px] md:text-[15px] leading-[1.95] font-jp">
+            少人数のハンズオン形式で、講師が一人ひとりに伴走。
+            参加者同士で課題を持ち寄り、議論しながら、自分の業務に組み込むツールを実際に作り上げる。
+            座学ではなく「現場で動くもの」を持ち帰る、実践型の2日間です。
+          </p>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-8 md:gap-14 mb-12 md:mb-16">
         <div>
           <span className="block font-en uppercase tracking-[0.32em] text-vermilion text-[13px] md:text-sm font-medium mb-4 md:mb-5">
@@ -81,33 +108,6 @@ export function Solution() {
           <strong className="text-ink font-semibold">「何ができ、何が社内を変える鍵なのか」</strong>——
           業務への組み込みを判断する目を、2日間で養います。
         </Lede>
-      </div>
-
-      {/* Hands-on Workshop — standalone block between Program intro and Curriculum */}
-      <div className="mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 md:gap-12 items-center">
-        <div className="aspect-[4/3] bg-paper-soft overflow-hidden">
-          <image-slot
-            id="workshop-photo"
-            shape="rect"
-            placeholder="ワークショップ風景の写真"
-            src="assets/workshop-photo.jpg"
-          />
-        </div>
-        <div className="min-w-0">
-          <span className="font-en uppercase tracking-[0.32em] text-[11px] text-vermilion font-medium mb-3 block">
-            ─── Hands-on Workshop
-          </span>
-          <h3 className="font-mincho font-bold text-[24px] md:text-[clamp(26px,2.8vw,40px)] leading-tight mb-4 md:mb-6">
-            <Under>現場実感</Under>のある
-            <br />
-            実践型のAI研修
-          </h3>
-          <p className="text-text-secondary text-[13px] md:text-[15px] leading-[1.95] font-jp">
-            少人数のハンズオン形式で、講師が一人ひとりに伴走。
-            参加者同士で課題を持ち寄り、議論しながら、自分の業務に組み込むツールを実際に作り上げる。
-            座学ではなく「現場で動くもの」を持ち帰る、実践型の2日間です。
-          </p>
-        </div>
       </div>
 
       <div className="bg-paper-card border border-ink/8 p-6 md:p-12">

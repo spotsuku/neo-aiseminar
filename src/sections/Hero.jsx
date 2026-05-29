@@ -58,59 +58,57 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Split: content (left on desktop) + image stack (right on desktop) */}
-        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] gap-6 md:gap-12 md:items-stretch md:flex-1">
-          {/* Image — appears first on mobile (above content), right on desktop */}
-          <div className="md:order-2 flex flex-col gap-5 md:gap-7 min-w-0">
-            <figure className="relative overflow-hidden">
-              <img
-                src="assets/hero-workshop.jpg"
-                alt="AIリスキリングキャンプ — 実際の研修風景"
-                className="block w-full h-[220px] sm:h-[280px] md:h-[320px] object-cover"
-              />
-              <figcaption className="absolute left-3 bottom-3 md:left-5 md:bottom-5 flex items-center gap-2 px-3 py-1.5 bg-ink/80 text-text-onink text-xs font-jp">
-                <span className="w-1.5 h-1.5 rounded-full bg-vermilion" />
-                実際の研修風景
-              </figcaption>
-            </figure>
-            {/* Live build console — now visible on mobile too */}
-            <HeroConsole />
+        {/* Single-column flow: image → text → system → CTAs */}
+        <div className="flex flex-col gap-6 md:gap-10 max-w-3xl mx-auto w-full">
+          {/* 1. Image */}
+          <figure className="relative overflow-hidden">
+            <img
+              src="assets/hero-workshop.jpg"
+              alt="AIリスキリングキャンプ — 実際の研修風景"
+              className="block w-full h-[220px] sm:h-[280px] md:h-[400px] object-cover"
+            />
+            <figcaption className="absolute left-3 bottom-3 md:left-5 md:bottom-5 flex items-center gap-2 px-3 py-1.5 bg-ink/80 text-text-onink text-xs font-jp">
+              <span className="w-1.5 h-1.5 rounded-full bg-vermilion" />
+              実際の研修風景
+            </figcaption>
+          </figure>
+
+          {/* 2. Text — caption + lede sit between the photo and the demo */}
+          <div className="flex flex-col gap-5 md:gap-7">
             <p className="font-mincho text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.4vw,36px)] leading-[1.55] text-text-onink-mute font-medium">
               <span className="text-text-onink font-bold underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:decoration-4 md:underline-offset-8">
                 全くAIが分からなくても
               </span>
               、1日でこうしたシステムは構築できます。
             </p>
-          </div>
-
-          {/* Content — second on mobile, left on desktop */}
-          <div className="md:order-1 flex flex-col min-w-0">
-            {/* Lede (headline now lives in the banner above) */}
-            <p className="font-mincho font-bold text-text-onink leading-[1.45] tracking-tight text-[clamp(20px,5.6vw,28px)] md:text-[clamp(26px,2.6vw,40px)] mb-6 md:mb-10">
+            <p className="font-mincho font-bold text-text-onink leading-[1.45] tracking-tight text-[clamp(20px,5.6vw,28px)] md:text-[clamp(26px,2.6vw,40px)]">
               いち早くAIを業務に組み込んだ会社が
               <span className="text-vermilion underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:underline-offset-[10px]">
                 成功する時代
               </span>
               です。
             </p>
+          </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col md:flex-row gap-3 md:gap-4">
-              <a
-                href="#cta"
-                className="group inline-flex items-center justify-center gap-3 px-5 py-4 md:py-3.5 bg-vermilion hover:bg-vermilion-dark text-white font-medium text-[15px] md:text-base transition-colors"
-              >
-                無料相談を予約する
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-              </a>
-              <a
-                href="#course"
-                className="group inline-flex items-center justify-center gap-3 px-5 py-4 md:py-3.5 border border-text-onink/80 text-text-onink hover:bg-white/10 font-medium text-[15px] md:text-base transition-colors"
-              >
-                研修内容を見る
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-              </a>
-            </div>
+          {/* 3. System — the live build demo */}
+          <HeroConsole />
+
+          {/* 4. CTAs */}
+          <div className="flex flex-col md:flex-row gap-3 md:gap-4">
+            <a
+              href="#cta"
+              className="group inline-flex items-center justify-center gap-3 px-5 py-4 md:py-3.5 bg-vermilion hover:bg-vermilion-dark text-white font-medium text-[15px] md:text-base transition-colors"
+            >
+              無料相談を予約する
+              <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href="#course"
+              className="group inline-flex items-center justify-center gap-3 px-5 py-4 md:py-3.5 border border-text-onink/80 text-text-onink hover:bg-white/10 font-medium text-[15px] md:text-base transition-colors"
+            >
+              研修内容を見る
+              <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
           </div>
         </div>
       </div>
