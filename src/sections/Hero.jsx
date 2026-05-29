@@ -30,7 +30,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-wrap flex-1 flex flex-col px-6 md:px-10 pt-4 pb-6 md:pt-28 md:pb-14">
+      <div className="relative z-10 mx-auto w-full max-w-wrap md:flex-1 flex flex-col px-6 md:px-10 pt-4 pb-6 md:pt-28 md:pb-14">
 
         {/* Banner: Field-tested AX Program / 現場実感が湧くAX研修 */}
         <div className="relative border-b border-white/15 mb-6 md:mb-8 pb-5 md:pb-8">
@@ -68,7 +68,7 @@ export function Hero() {
         </div>
 
         {/* Split: content (left on desktop) + image stack (right on desktop) */}
-        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] gap-6 md:gap-12 items-stretch flex-1">
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] gap-6 md:gap-12 md:items-stretch md:flex-1">
           {/* Image — appears first on mobile (above content), right on desktop */}
           <div className="md:order-2 flex flex-col gap-5 md:gap-7 min-w-0">
             <figure className="relative overflow-hidden">

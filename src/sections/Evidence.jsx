@@ -33,7 +33,7 @@ export function Evidence() {
     <Section label="02 Evidence" tone="light">
       <div className="max-w-3xl mb-12 md:mb-16">
         <Display size="lg">
-          プログラミング未経験の経営者が、
+          AI未経験の経営者が、
           <Under>自分の手で</Under>業務を変えはじめています。
         </Display>
         <Lede className="mt-6 md:mt-8">
