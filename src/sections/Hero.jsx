@@ -82,16 +82,14 @@ export function Hero() {
                 実際の研修風景
               </figcaption>
             </figure>
-            {/* Live build console — now visible on mobile too, with caption */}
-            <div>
-              <HeroConsole />
-              <p className="mt-4 md:mt-5 font-jp text-[14px] md:text-[clamp(15px,1.2vw,18px)] leading-[1.7] text-text-onink-mute">
-                <span className="text-text-onink font-bold underline decoration-vermilion decoration-2 underline-offset-4">
-                  全くAIが分からなくても
-                </span>
-                、1日でこうしたシステムは構築できます。
-              </p>
-            </div>
+            {/* Live build console — now visible on mobile too */}
+            <HeroConsole />
+            <p className="font-jp text-[14px] md:text-[clamp(15px,1.2vw,18px)] leading-[1.7] text-text-onink-mute">
+              <span className="text-text-onink font-bold underline decoration-vermilion decoration-2 underline-offset-4">
+                全くAIが分からなくても
+              </span>
+              、1日でこうしたシステムは構築できます。
+            </p>
           </div>
 
           {/* Content — second on mobile, left on desktop */}
