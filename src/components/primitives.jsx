@@ -43,11 +43,13 @@ export function Display({ size = "lg", children, className = "" }) {
     lg: "text-[clamp(26px,7vw,38px)] md:text-[clamp(36px,4.6vw,62px)] leading-[1.3]",
     md: "text-[clamp(22px,5.8vw,32px)] md:text-[clamp(28px,3vw,44px)] leading-[1.35]",
   }[size];
-  // text-balance evens out line lengths; break-keep stops JP wrapping
-  // mid-phrase so we don't get one-character orphan lines.
+  // text-balance evens out line lengths without forcing overflow.
+  // [overflow-wrap:anywhere] is the safety net: if a long JP phrase
+  // would otherwise refuse to break and bleed past the right edge,
+  // the browser is allowed to break it anywhere as a last resort.
   return (
     <h2
-      className={`font-mincho font-bold tracking-tight text-balance break-keep ${sizeClasses} ${className}`}
+      className={`font-mincho font-bold tracking-tight text-balance min-w-0 [overflow-wrap:anywhere] ${sizeClasses} ${className}`}
     >
       {children}
     </h2>

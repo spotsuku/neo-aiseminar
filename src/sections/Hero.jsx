@@ -38,7 +38,7 @@ export function Hero() {
             <span className="font-en text-[11px] md:text-sm tracking-[0.2em] md:tracking-[0.28em] text-vermilion font-medium uppercase">
               Field-tested AX Program
             </span>
-            <h1 className="font-mincho font-bold text-text-onink text-[clamp(28px,8vw,44px)] md:text-[clamp(44px,6.4vw,92px)] leading-[1.25] md:tracking-wider break-keep">
+            <h1 className="font-mincho font-bold text-text-onink text-[clamp(28px,8vw,44px)] md:text-[clamp(44px,6.4vw,92px)] leading-[1.25] md:tracking-wider">
               本物の<Under>現場実感</Under>が湧く
               <br />
               AI活用を。

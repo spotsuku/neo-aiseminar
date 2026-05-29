@@ -64,7 +64,7 @@ export function Solution() {
                 <span className="font-en-serif italic text-vermilion text-[28px] md:text-[40px] font-medium leading-none shrink-0">
                   {i + 1}.
                 </span>
-                <span className="font-mincho font-bold text-ink text-[20px] md:text-[28px] leading-snug break-keep">
+                <span className="font-mincho font-bold text-ink text-[20px] md:text-[28px] leading-snug">
                   {step}
                 </span>
               </li>

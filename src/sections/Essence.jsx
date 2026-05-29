@@ -85,7 +85,7 @@ export function Essence() {
         ))}
       </div>
 
-      <p className="mt-16 md:mt-24 font-mincho text-ink text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.6vw,36px)] leading-[1.7] font-bold break-keep text-balance">
+      <p className="mt-16 md:mt-24 font-mincho text-ink text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.6vw,36px)] leading-[1.7] font-bold text-balance">
         経営者が変わらなければ、会社は変わらない。
         <br />
         <span className="text-vermilion">経営者がAIで何ができるかを体感していなければ、何も始まらない。</span>
