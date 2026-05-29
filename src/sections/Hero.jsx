@@ -15,7 +15,7 @@ export function Hero() {
     <section
       data-screen-label="01 Hero"
       data-tone="dark"
-      className="relative overflow-hidden bg-ink text-text-onink min-h-0 md:min-h-screen flex flex-col pt-16 md:pt-0"
+      className="relative overflow-hidden bg-ink text-text-onink min-h-0 md:min-h-screen flex flex-col pt-14 md:pt-0"
     >
       {/* Decorative bg grid (kept as a tiny inline SVG so we don't need
           a separate CSS class) */}
@@ -29,7 +29,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-wrap flex-1 flex flex-col px-5 md:px-10 pt-6 pb-6 md:pt-28 md:pb-14">
+      <div className="relative z-10 mx-auto w-full max-w-wrap flex-1 flex flex-col px-6 md:px-10 pt-2 pb-6 md:pt-28 md:pb-14">
         {/* Meta row — stacks on mobile so JP text doesn't collide with English */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1.5 md:gap-4 mb-4 md:mb-8 font-en uppercase tracking-[0.08em] md:tracking-[0.28em] text-[10px] md:text-[11px] text-text-onink-mute leading-relaxed">
           <div className="flex flex-wrap items-center gap-x-2.5 md:gap-x-4 gap-y-1">

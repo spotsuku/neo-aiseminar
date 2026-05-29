@@ -38,12 +38,12 @@ export function Diagnosis() {
   return (
     <Section label="03 Diagnosis" tone="dark">
       <div ref={ref}>
-        <Connector num="03" en="Self Diagnosis" jp="あなたの会社はこうなっていませんか" onDark />
+        <Connector num="03" en="Self Diagnosis" onDark />
 
         <div className="max-w-3xl mx-auto">
-          <p className="font-en uppercase tracking-[0.28em] text-[11px] text-text-onink-mute mb-6 md:mb-8">
-            あなたの会社は、こうなっていませんか
-          </p>
+          <h2 className="font-mincho font-bold text-text-onink text-[clamp(22px,5.6vw,30px)] md:text-[clamp(28px,3vw,42px)] leading-snug break-keep text-balance mb-8 md:mb-12">
+            あなたの会社は、こうなっていませんか？
+          </h2>
           <ul className="flex flex-col gap-3 md:gap-4 mb-10 md:mb-14">
             {ITEMS.map((t, i) => {
               const isChecked = checked.includes(i);

@@ -20,7 +20,7 @@ export function Section({ id, label, tone = "light", className = "", children })
       data-tone={tone}
       className={`relative ${toneClasses} py-16 md:py-[clamp(64px,9vh,110px)] ${className}`}
     >
-      <div className="mx-auto w-full max-w-wrap px-5 md:px-10">{children}</div>
+      <div className="mx-auto w-full max-w-wrap px-6 md:px-10">{children}</div>
     </section>
   );
 }
@@ -39,12 +39,16 @@ export function Eyebrow({ children, onDark = false }) {
 
 export function Display({ size = "lg", children, className = "" }) {
   const sizeClasses = {
-    xl: "text-[clamp(28px,8vw,40px)] md:text-[clamp(36px,5.6vw,76px)] leading-[1.3]",
-    lg: "text-[clamp(24px,7vw,34px)] md:text-[clamp(30px,4vw,54px)] leading-[1.35]",
-    md: "text-[clamp(20px,5.6vw,28px)] md:text-[clamp(24px,2.6vw,38px)] leading-[1.4]",
+    xl: "text-[clamp(26px,7.5vw,38px)] md:text-[clamp(36px,5.6vw,76px)] leading-[1.3]",
+    lg: "text-[clamp(22px,6.4vw,30px)] md:text-[clamp(30px,4vw,54px)] leading-[1.35]",
+    md: "text-[clamp(19px,5.2vw,26px)] md:text-[clamp(24px,2.6vw,38px)] leading-[1.4]",
   }[size];
+  // text-balance evens out line lengths; break-keep stops JP wrapping
+  // mid-phrase so we don't get one-character orphan lines.
   return (
-    <h2 className={`font-mincho font-bold tracking-tight ${sizeClasses} ${className}`}>
+    <h2
+      className={`font-mincho font-bold tracking-tight text-balance break-keep ${sizeClasses} ${className}`}
+    >
       {children}
     </h2>
   );
@@ -75,24 +79,40 @@ export function Under({ children, className = "" }) {
 export function Connector({ num, en, jp, onDark = false }) {
   return (
     <div
-      className={`flex flex-wrap items-center gap-3 md:gap-5 mb-8 md:mb-12 pb-4 md:pb-5 border-b font-en uppercase tracking-[0.28em] text-[11px] md:text-xs ${
-        onDark
-          ? "text-text-onink-mute border-white/15"
-          : "text-text-secondary border-ink/10"
+      className={`mb-8 md:mb-12 pb-4 md:pb-5 border-b ${
+        onDark ? "border-white/15" : "border-ink/10"
       }`}
     >
-      <span
-        className={`font-en-serif italic normal-case tracking-normal text-[20px] md:text-[26px] font-medium ${
-          onDark ? "text-text-onink" : "text-ink"
+      <div
+        className={`flex flex-col md:flex-row md:items-center gap-2 md:gap-5 font-en uppercase tracking-[0.2em] md:tracking-[0.28em] text-[11px] md:text-xs ${
+          onDark ? "text-text-onink-mute" : "text-text-secondary"
         }`}
       >
-        {num}
-      </span>
-      <span>{en}</span>
-      <span className={`flex-1 min-w-6 h-[1px] ${onDark ? "bg-white/15" : "bg-ink/10"}`} />
-      <span className={`normal-case tracking-wider font-jp ${onDark ? "text-text-onink" : "text-ink"}`}>
-        {jp}
-      </span>
+        <div className="flex items-center gap-3 md:gap-5 min-w-0">
+          <span
+            className={`font-en-serif italic normal-case tracking-normal text-[20px] md:text-[26px] font-medium shrink-0 ${
+              onDark ? "text-text-onink" : "text-ink"
+            }`}
+          >
+            {num}
+          </span>
+          <span className="truncate">{en}</span>
+        </div>
+        <span
+          className={`hidden md:block flex-1 min-w-6 h-[1px] ${
+            onDark ? "bg-white/15" : "bg-ink/10"
+          }`}
+        />
+        {jp && (
+          <span
+            className={`normal-case tracking-wider font-jp ${
+              onDark ? "text-text-onink" : "text-ink"
+            }`}
+          >
+            {jp}
+          </span>
+        )}
+      </div>
     </div>
   );
 }

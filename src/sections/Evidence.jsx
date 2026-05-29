@@ -80,19 +80,23 @@ export function Evidence() {
               <p className="text-[13px] md:text-[14px] text-text-secondary leading-[1.85] font-jp mb-5 flex-1">
                 {c.desc}
               </p>
-              <div className="bg-paper-soft p-4 md:p-5 flex flex-col gap-2 mb-5">
-                <div className="flex items-center justify-between text-[12px] md:text-[13px]">
-                  <span className="text-text-muted font-jp">これまで</span>
-                  <span className="font-mincho text-text-secondary line-through">
+              <div className="bg-paper-soft px-4 py-3 md:px-5 md:py-3.5 mb-5 flex items-center justify-between gap-3 md:gap-4">
+                <div className="flex flex-col gap-0.5 min-w-0">
+                  <span className="text-text-muted font-jp text-[10px] md:text-[11px]">
+                    これまで
+                  </span>
+                  <span className="font-mincho text-text-secondary line-through text-[16px] md:text-[18px] leading-none">
                     {c.kpi.before}
                   </span>
                 </div>
-                <div aria-hidden className="text-center text-vermilion text-sm">
-                  ↓
-                </div>
-                <div className="flex items-center justify-between text-[12px] md:text-[13px]">
-                  <span className="text-text-muted font-jp">受講後</span>
-                  <span className="font-mincho text-vermilion font-bold text-[16px] md:text-[18px]">
+                <span aria-hidden className="text-vermilion text-[18px] md:text-[22px] font-bold shrink-0">
+                  →
+                </span>
+                <div className="flex flex-col gap-0.5 items-end min-w-0">
+                  <span className="text-vermilion font-jp text-[10px] md:text-[11px] font-bold">
+                    受講後
+                  </span>
+                  <span className="font-mincho text-vermilion font-bold text-[22px] md:text-[26px] leading-none">
                     {c.kpi.after}
                   </span>
                 </div>
