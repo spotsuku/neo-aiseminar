@@ -34,7 +34,10 @@ export function Evidence() {
       <div className="max-w-3xl mb-12 md:mb-16">
         <Display size="lg">
           AI未経験の経営者が、
-          <Under>自分の手で</Under>業務を変えはじめています。
+          <br />
+          <Under>自分の手で</Under>業務を
+          <br />
+          変えはじめています。
         </Display>
         <Lede className="mt-6 md:mt-8">
           ある経営者は、2ヶ月でアプリを10個自作し、社内の業務を次々と自動化しはじめました。
