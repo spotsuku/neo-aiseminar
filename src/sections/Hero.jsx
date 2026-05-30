@@ -59,11 +59,11 @@ export function Hero() {
         </div>
 
         {/* Mobile order: image → text → system → CTAs
-            Desktop: text (left, rows 1-2) | image+system (right, stacked)
-                     CTAs span full width at row 3 */}
+            Desktop: image (left) + system (right) share row 1.
+                     text spans row 2, CTAs span row 3. */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-12 md:gap-y-8 w-full">
-          {/* 1. Image — first on mobile, top of right column on desktop */}
-          <figure className="relative overflow-hidden md:row-start-1 md:col-start-2 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full">
+          {/* 1. Image — first on mobile, top-left on desktop */}
+          <figure className="relative overflow-hidden md:row-start-1 md:col-start-1 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full">
             <img
               src="assets/hero-workshop.jpg"
               alt="AIリスキリングキャンプ — 実際の研修風景"
@@ -75,15 +75,15 @@ export function Hero() {
             </figcaption>
           </figure>
 
-          {/* 2. Text — second on mobile, left column spans rows 1-2 on desktop */}
-          <div className="flex flex-col gap-5 md:gap-7 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0 md:row-start-1 md:row-span-2 md:col-start-1 md:justify-center">
-            <p className="font-mincho text-[clamp(20px,5.4vw,28px)] md:text-[clamp(22px,2vw,32px)] leading-[1.55] text-text-onink-mute font-medium">
+          {/* 2. Text — second on mobile, row 2 spanning both columns on desktop */}
+          <div className="flex flex-col gap-4 md:gap-5 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0 md:row-start-2 md:col-span-2">
+            <p className="font-mincho text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.2vw,34px)] leading-[1.5] text-text-onink-mute font-medium">
               <span className="text-text-onink font-bold underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:decoration-4 md:underline-offset-8">
                 AIが全く分からなくても
               </span>
               、1日で簡単な業務システムは構築できます。
             </p>
-            <p className="font-mincho font-bold text-text-onink leading-[1.45] tracking-tight text-[clamp(20px,5.6vw,28px)] md:text-[clamp(24px,2.4vw,38px)]">
+            <p className="font-mincho font-bold text-text-onink leading-[1.4] tracking-tight text-[clamp(20px,5.6vw,28px)] md:text-[clamp(26px,2.6vw,40px)]">
               いち早くAIを業務に組み込んだ会社が
               <span className="text-vermilion underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:underline-offset-[10px]">
                 成功する時代
@@ -92,13 +92,13 @@ export function Hero() {
             </p>
           </div>
 
-          {/* 3. System — third on mobile, bottom of right column on desktop */}
-          <div className="max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0 md:row-start-2 md:col-start-2">
+          {/* 3. System — third on mobile, top-right on desktop */}
+          <div className="max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0 md:row-start-1 md:col-start-2">
             <HeroConsole />
           </div>
 
-          {/* 4. CTAs — always sit directly under the system demo */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full md:row-start-3 md:col-span-2 md:justify-center md:max-w-2xl">
+          {/* 4. CTAs — always at the bottom */}
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-3xl md:max-w-2xl mx-auto md:mx-auto w-full md:row-start-3 md:col-span-2 md:justify-center">
             <a
               href="#cta"
               className="group inline-flex items-center justify-center gap-3 px-5 py-4 md:py-3.5 bg-vermilion hover:bg-vermilion-dark text-white font-medium text-[15px] md:text-base transition-colors flex-1"
