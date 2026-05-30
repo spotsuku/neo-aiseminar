@@ -57,12 +57,12 @@ export function Essence() {
           <br />
           出せるのは——
         </p>
-        <p className="font-mincho text-ink text-[clamp(28px,7.4vw,40px)] md:text-[clamp(34px,4vw,56px)] font-bold leading-tight tracking-tight">
-          社長・
+        <p className="font-mincho text-ink text-[clamp(26px,6.8vw,38px)] md:text-[clamp(30px,3.4vw,50px)] font-bold leading-[1.2] tracking-tight">
+          <span className="whitespace-nowrap">社長・</span>
           <br />
-          DX推進責任者である
+          <span className="whitespace-nowrap">DX推進責任者である</span>
           <br />
-          <span className="text-vermilion">経営層</span>だけ。
+          <span className="whitespace-nowrap"><span className="text-vermilion">経営層</span>だけ。</span>
         </p>
       </div>
 
