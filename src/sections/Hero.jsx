@@ -30,26 +30,26 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-wrap md:flex-1 flex flex-col px-6 md:px-10 pt-4 pb-6 md:pt-28 md:pb-14">
+      <div className="relative z-10 mx-auto w-full max-w-wrap md:flex-1 flex flex-col px-6 md:px-10 pt-4 pb-6 md:pt-16 md:pb-10">
 
         {/* Banner: Field-tested AX Program / 現場実感が湧くAX研修 */}
-        <div className="relative border-b border-white/15 mb-6 md:mb-8 pb-5 md:pb-8">
+        <div className="relative border-b border-white/15 mb-5 md:mb-6 pb-4 md:pb-6">
           <div className="flex flex-col gap-1 md:gap-2">
             <span className="font-en text-[11px] md:text-sm tracking-[0.2em] md:tracking-[0.28em] text-vermilion font-medium uppercase">
               Field-tested AX Program
             </span>
-            <h1 className="font-mincho font-bold text-text-onink text-[clamp(26px,7.2vw,38px)] md:text-[clamp(40px,5vw,72px)] leading-[1.25] md:tracking-wide">
+            <h1 className="font-mincho font-bold text-text-onink text-[clamp(26px,7.2vw,38px)] md:text-[clamp(36px,4.4vw,64px)] leading-[1.2] md:tracking-wide">
               <span className="whitespace-nowrap">日々の<Under>業務課題</Under>を解決する</span>
               <br />
               <span className="whitespace-nowrap">実践型AI研修</span>
             </h1>
 
             {/* Partnership — clean headline form (matches the CTA section) */}
-            <div className="mt-5 md:mt-7">
-              <span className="block font-en uppercase tracking-[0.32em] text-[10px] md:text-[12px] text-vermilion font-bold mb-3 md:mb-4">
+            <div className="mt-3 md:mt-4">
+              <span className="block font-en uppercase tracking-[0.32em] text-[10px] md:text-[12px] text-vermilion font-bold mb-2 md:mb-3">
                 ─── Strategic Partnership
               </span>
-              <h2 className="font-mincho font-bold text-text-onink text-[clamp(22px,6vw,30px)] md:text-[clamp(28px,3.2vw,46px)] leading-[1.5] tracking-tight">
+              <h2 className="font-mincho font-bold text-text-onink text-[clamp(20px,5.4vw,28px)] md:text-[clamp(24px,2.6vw,38px)] leading-[1.4] tracking-tight">
                 リアルなビジネス現場 <span className="font-en-serif italic text-vermilion font-medium">×</span>
                 <br />
                 <span className="text-vermilion">東京大学発AIスタートアップ。</span>
