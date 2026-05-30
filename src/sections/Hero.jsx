@@ -1,6 +1,7 @@
 import * as React from "react";
 import { HeroConsole } from "../components/HeroConsole.jsx";
 import { Under } from "../components/primitives.jsx";
+import { content } from "../content.js";
 
 /**
  * Hero — Tailwind rewrite (Phase 1 sample).
@@ -102,7 +103,7 @@ export function Hero() {
           {/* 4. CTAs — always at the bottom */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-3xl md:max-w-2xl mx-auto md:mx-auto w-full md:row-start-3 md:col-span-2 md:justify-center">
             <a
-              href="#cta"
+              href={content.links.consultation}
               className="group inline-flex items-center justify-center gap-3 px-5 py-4 md:py-3.5 bg-vermilion hover:bg-vermilion-dark text-white font-medium text-[15px] md:text-base transition-colors flex-1"
             >
               無料相談を予約する

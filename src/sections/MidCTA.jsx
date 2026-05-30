@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Btn } from "../components/primitives.jsx";
+import { content } from "../content.js";
 
 export function MidCTA({ eyebrow, title, sub }) {
   return (
@@ -15,10 +16,10 @@ export function MidCTA({ eyebrow, title, sub }) {
           {sub}
         </p>
         <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center">
-          <Btn variant="primary" href="#cta">
+          <Btn variant="primary" href={content.links.consultation}>
             無料相談を予約する
           </Btn>
-          <Btn variant="ghost" onDark href="#cta">
+          <Btn variant="ghost" onDark href={content.links.document}>
             資料を無料でダウンロード
           </Btn>
         </div>

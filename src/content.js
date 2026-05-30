@@ -13,6 +13,11 @@ export const content = {
     short: "AI",
     full: "リスキリングキャンプ",
   },
+  // External destinations for every CTA on the page.
+  links: {
+    consultation: "https://neo-ai-camp.vercel.app/consultation",
+    document: "https://neo-ai-camp.vercel.app/document",
+  },
   midCTA: {
     eyebrow: "Free Consultation",
     title: "まずは、話を聞きにくる感覚で。",

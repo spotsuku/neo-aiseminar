@@ -1,4 +1,5 @@
 import * as React from "react";
+import { content } from "../content.js";
 
 export function TopNav({ overDark = false }) {
   return (
@@ -23,11 +24,11 @@ export function TopNav({ overDark = false }) {
         <a href="#course" className="hidden md:inline opacity-80 hover:opacity-100">
           研修内容
         </a>
-        <a href="#cta" className="hidden md:inline opacity-80 hover:opacity-100">
+        <a href={content.links.consultation} className="hidden md:inline opacity-80 hover:opacity-100">
           無料相談
         </a>
         <a
-          href="#cta"
+          href={content.links.document}
           className={`inline-flex items-center gap-2 px-4 py-2 text-[12px] md:text-[13px] font-medium transition-colors ${
             overDark
               ? "bg-paper text-ink hover:bg-white"

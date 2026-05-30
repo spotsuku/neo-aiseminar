@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Btn } from "../components/primitives.jsx";
+import { content } from "../content.js";
 
 export function CTA() {
   return (
@@ -42,10 +43,10 @@ export function CTA() {
             </p>
 
             <div className="flex flex-col md:flex-row gap-3 md:gap-4 mb-10 md:mb-14">
-              <Btn variant="primary" href="#">
+              <Btn variant="primary" href={content.links.consultation}>
                 無料相談を予約する（30分・オンライン可）
               </Btn>
-              <Btn variant="ghost" onDark href="#">
+              <Btn variant="ghost" onDark href={content.links.document}>
                 資料を無料でダウンロード
               </Btn>
             </div>
