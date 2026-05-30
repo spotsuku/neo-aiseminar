@@ -38,8 +38,9 @@ export function Hero() {
             <span className="font-en text-[11px] md:text-sm tracking-[0.2em] md:tracking-[0.28em] text-vermilion font-medium uppercase">
               Field-tested AX Program
             </span>
-            <h1 className="font-mincho font-bold text-text-onink text-[clamp(28px,8vw,44px)] md:text-[clamp(44px,6.4vw,92px)] leading-[1.25] md:tracking-wider">
-              日々の<Under>業務課題</Under>を解決する
+            <h1 className="font-mincho font-bold text-text-onink text-[clamp(26px,7.2vw,38px)] md:text-[clamp(40px,5vw,72px)] leading-[1.25] md:tracking-wide">
+              <span className="whitespace-nowrap">日々の<Under>業務課題</Under>を解決する</span>
+              <br />
               <span className="whitespace-nowrap">実践型AI研修</span>
             </h1>
 
@@ -51,7 +52,7 @@ export function Hero() {
               <h2 className="font-mincho font-bold text-text-onink text-[clamp(22px,6vw,30px)] md:text-[clamp(28px,3.2vw,46px)] leading-[1.5] tracking-tight">
                 リアルなビジネス現場 <span className="font-en-serif italic text-vermilion font-medium">×</span>
                 <br />
-                <span className="text-vermilion">東京大学発スタートアップ。</span>
+                <span className="text-vermilion">東京大学発AIスタートアップ。</span>
               </h2>
             </div>
           </div>

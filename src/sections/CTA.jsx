@@ -31,7 +31,7 @@ export function CTA() {
             <h2 className="font-mincho font-bold text-text-onink text-[clamp(24px,6vw,36px)] md:text-[clamp(32px,4vw,56px)] leading-[1.4] mb-6 md:mb-8">
               リアルなビジネス現場 ×
               <br />
-              東京大学発スタートアップ。
+              東京大学発AIスタートアップ。
               <br />
               <span className="text-vermilion">まずは、お気軽に。</span>
             </h2>
