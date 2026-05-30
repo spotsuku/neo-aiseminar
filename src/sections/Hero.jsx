@@ -58,14 +58,14 @@ export function Hero() {
         </div>
 
         {/* Mobile: single column (image → text → system → CTAs)
-            Desktop: image full-width on top, then text+CTAs left / system right */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-12 md:gap-y-10 w-full">
-          {/* 1. Image (full width on every breakpoint) */}
-          <figure className="relative overflow-hidden md:col-span-2 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full">
+            Desktop: left column = text + CTAs, right column = image (top) + system (bottom) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-12 md:gap-y-6 w-full">
+          {/* 1. Image — first on mobile, top of right column on desktop */}
+          <figure className="relative overflow-hidden md:row-start-1 md:col-start-2 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full">
             <img
               src="assets/hero-workshop.jpg"
               alt="AIリスキリングキャンプ — 実際の研修風景"
-              className="block w-full h-[220px] sm:h-[280px] md:h-[360px] object-cover"
+              className="block w-full h-[220px] sm:h-[280px] md:h-[300px] object-cover"
             />
             <figcaption className="absolute left-3 bottom-3 md:left-5 md:bottom-5 flex items-center gap-2 px-3 py-1.5 bg-ink/80 text-text-onink text-xs font-jp">
               <span className="w-1.5 h-1.5 rounded-full bg-vermilion" />
@@ -73,8 +73,8 @@ export function Hero() {
             </figcaption>
           </figure>
 
-          {/* 2. Text + CTAs (left column on desktop) */}
-          <div className="flex flex-col gap-5 md:gap-7 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0 md:justify-center">
+          {/* 2. Text + CTAs — second on mobile, left column spans both rows on desktop */}
+          <div className="flex flex-col gap-5 md:gap-7 max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0 md:row-start-1 md:row-span-2 md:col-start-1 md:justify-center">
             <p className="font-mincho text-[clamp(20px,5.4vw,28px)] md:text-[clamp(22px,2vw,32px)] leading-[1.55] text-text-onink-mute font-medium">
               <span className="text-text-onink font-bold underline decoration-vermilion decoration-[3px] underline-offset-[6px] md:decoration-4 md:underline-offset-8">
                 全くAIが分からなくても
@@ -108,8 +108,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* 3. System — live build demo (right column on desktop) */}
-          <div className="max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0">
+          {/* 3. System — last on mobile, bottom of right column on desktop */}
+          <div className="max-w-3xl md:max-w-none mx-auto md:mx-0 w-full min-w-0 md:row-start-2 md:col-start-2">
             <HeroConsole />
           </div>
         </div>
