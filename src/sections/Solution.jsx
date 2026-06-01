@@ -5,7 +5,8 @@ const DAYS = [
   {
     tag: "DAY",
     num: "1",
-    h: "AIの基礎と、開発の全工程を手を動かして学ぶ",
+    date: "6/25",
+    h: "AI最先端を学習・業務アプリ開発ツール作成の基礎",
     items: [
       "AIの基本知識",
       "Claudeを使って、講師と一緒にアプリを開発する体験",
@@ -18,25 +19,29 @@ const DAYS = [
     num: "2",
     unit: "週間",
     interval: true,
-    h: "未来ドリル",
-    sub: "— 自分の業務改善アプリを、自分の手で作る期間",
+    h: "DAY1とDAY2の間の実装期間",
+    sub: "— DAY1で学んだ知見を活かし、実際の業務改善アプリをご自身で開発する期間",
     items: [
-      "実際の業務改善アプリを、ご自身で開発",
+      "DAY1で学んだ内容を活かし、自社の業務改善アプリを実装",
       <>
         期間中は<strong className="text-ink font-semibold">オンラインで講師に相談可能</strong>
       </>,
-      "2週間でアウトプットを完成させる「実装の山」",
+      <>
+        <strong className="text-ink font-semibold">Claudeアカウントを付与</strong>
+        （DAY1〜DAY2終了まで、interval期間を含む全期間）
+      </>,
     ],
-    note: "→ Day 1 と Day 2 の間に十分な実装期間があるのが、本研修の最大の特徴。",
+    note: "→ DAY1 と DAY2 の間に十分な実装期間があるのが、本研修の最大の特徴。",
   },
   {
     tag: "DAY",
     num: "2",
-    h: "セキュリティ・リスクとハッカソンで仕上げる",
+    date: "7/8",
+    h: "リスク対策・ハッカソン(集中短期開発)",
     items: [
       "セキュリティ・リスクについて、経営者が知っておくべき知識",
-      "ハッカソン形式での実装ワーク",
-      "未来ドリルの成果報告会",
+      "ハッカソン形式での集中短期開発ワーク",
+      "interval期間に開発したアプリの成果報告会",
       "社内展開に向けた、最初のゴーサイン設計",
     ],
   },
@@ -159,6 +164,11 @@ export function Solution() {
                     </span>
                   )}
                 </span>
+                {d.date && (
+                  <span className="ml-auto font-en-serif italic text-vermilion text-[15px] md:text-[18px] font-medium">
+                    {d.date}
+                  </span>
+                )}
               </div>
               <h4
                 className={`font-mincho font-bold text-[16px] md:text-[18px] leading-[1.55] ${
@@ -187,16 +197,6 @@ export function Solution() {
               )}
             </div>
           ))}
-        </div>
-
-        <div className="mt-8 md:mt-10 p-5 md:p-6 bg-ink text-text-onink flex flex-col md:flex-row gap-3 md:gap-5 md:items-center">
-          <span className="px-3 py-1 bg-vermilion text-white font-en uppercase tracking-[0.18em] text-[11px] self-start">
-            提供物
-          </span>
-          <span className="text-[13px] md:text-[14px] font-jp leading-[1.85]">
-            受講期間中、<strong className="text-text-onink font-semibold">Claude アカウント</strong>
-            を付与いたします。 （Day 1〜Day 2 終了まで、未来ドリル期間を含む全期間）
-          </span>
         </div>
 
         <div className="mt-10 md:mt-14 p-6 md:p-8 bg-paper-soft border-l-4 border-vermilion flex flex-col md:flex-row md:items-center md:justify-between gap-4">
