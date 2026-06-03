@@ -129,7 +129,7 @@
   /* 98%と95%+: 2行目・横並び */
   .aircamp-hero .proof-sub-row{display:flex;flex-direction:row;gap:0;align-items:stretch;border-top:1px solid rgba(255,255,255,.12);padding-top:14px;}
   .aircamp-hero .proof-sub-row .stat{flex:1;}
-  .aircamp-hero .proof-sub-row .div{display:block;width:1px;min-height:40px;align-self:center;background:rgba(255,255,255,.18);}
+  .aircamp-hero .proof-sub-row .div{display:block;width:1px;min-height:unset;align-self:stretch;background:rgba(255,255,255,.18);margin-inline:4px;}
   .aircamp-hero .proof-sub-row .pn{font-size:clamp(30px,8vw,42px);}
   .aircamp-hero .proof .ps{display:block;font-size:10.5px;line-height:1.55;}
 }
