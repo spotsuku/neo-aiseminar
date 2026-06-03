@@ -66,8 +66,7 @@ export function Hero() {
           <div className="hero-bleed-content">
             <div className="ac-eyebrow hero-eyebrow rv">2-DAY · OUTCOME-DRIVEN</div>
             <h1 className="rv rv-d1">
-              自社課題を、<span className="ac-mark">2日間</span>で<br />
-              解決する<span className="ac-mark">実践型</span>AI研修
+              自社課題を、<span className="ac-mark">2日間</span>で<span className="hero-h1-br" aria-hidden="true" />解決する<span className="ac-mark">実践型</span>AI研修
             </h1>
             <p className="hero-sub rv rv-d2">
               リアルなビジネス現場 × <span className="blue">東京大学発AIスタートアップ</span>。<br />
@@ -89,9 +88,18 @@ export function Hero() {
               <span className="pl">累計受講者数</span>
             </div>
             <span className="div" />
-            <div className="stat">
-              <span className="pn">100<span className="u">社以上</span></span>
-              <span className="pl">導入企業数</span>
+            <div className="stat stat-companies">
+              <span className="pl">受講実績企業（一部）</span>
+              <ul className="company-list">
+                <li>株式会社タカギ</li>
+                <li>株式会社明治産業</li>
+                <li>株式会社SBSプロモーション（静岡放送）</li>
+                <li>株式会社トリドリ</li>
+                <li>株式会社博運社</li>
+                <li>タカトリグループホールディングス株式会社</li>
+                <li>株式会社ビープラスト（サガテレビ）</li>
+                <li>株式会社レックスホールディングス</li>
+              </ul>
             </div>
             <span className="div" />
             <div className="stat">
