@@ -66,7 +66,6 @@ export function Hero() {
           <div className="hero-bleed-content">
             <div className="hero-tags rv">
               <span className="hero-tag-badge">経営者向け</span>
-              <span className="ac-eyebrow hero-eyebrow">2-DAY · OUTCOME-DRIVEN</span>
             </div>
             <h1 className="rv rv-d1">
               自社課題を、<span className="ac-mark">2日間</span>で<span className="hero-h1-br" aria-hidden="true" />解決する<span className="ac-mark">実践型</span>AI研修

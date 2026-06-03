@@ -56,7 +56,7 @@
 
 /* ---- 経営者向けタグ + eyebrow 横並び ---- */
 .aircamp-hero .hero-tags{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
-.aircamp-hero .hero-tag-badge{display:inline-flex;align-items:center;padding:5px 12px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);border-radius:2px;font-family:var(--ac-sans);font-size:12px;font-weight:700;letter-spacing:.12em;color:#fff;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);}
+.aircamp-hero .hero-tag-badge{display:inline-flex;align-items:center;padding:8px 20px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);border-radius:2px;font-family:var(--ac-serif);font-size:clamp(16px,1.6vw,22px);font-weight:600;letter-spacing:.18em;color:#fff;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);}
 
 /* ---- scroll reveal ---- */
 .aircamp-hero .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);}
