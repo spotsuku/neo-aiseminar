@@ -15,6 +15,9 @@ html, body { overflow-x: hidden; }
    ============================================================ */
 .carousel-root { position: relative; }
 
+/* Track wrapper (needed for arrow positioning) */
+.carousel-track-wrap { position: relative; }
+
 /* Mobile track: horizontal snap */
 .carousel-track {
   display: flex;
@@ -34,6 +37,26 @@ html, body { overflow-x: hidden; }
 
 /* Desktop fallback: show normally */
 .carousel-desktop { display: none; }
+
+/* Arrow buttons */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  display: flex; align-items: center; justify-content: center;
+  color: #14233f;
+  cursor: pointer;
+  transition: background .18s, box-shadow .18s;
+}
+.carousel-arrow:hover { background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,.18); }
+.carousel-arrow-prev { left: -14px; }
+.carousel-arrow-next { right: -14px; }
 
 /* Dot indicators */
 .carousel-dots {
@@ -58,9 +81,9 @@ html, body { overflow-x: hidden; }
 
 /* ≥768px: hide mobile track + dots, show desktop layout */
 @media (min-width: 768px) {
-  .carousel-track  { display: none; }
-  .carousel-dots   { display: none; }
-  .carousel-desktop { display: contents; }
+  .carousel-track-wrap { display: none; }
+  .carousel-dots        { display: none; }
+  .carousel-desktop     { display: contents; }
 }
 
 /* image-slot ships with a fixed 240×160 host size (inline-block).
