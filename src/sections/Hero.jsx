@@ -68,7 +68,7 @@ export function Hero() {
               <span className="hero-tag-badge">経営者向け</span>
             </div>
             <h1 className="rv rv-d1">
-              自社課題を、<span className="ac-mark">2日間</span>で<span className="hero-h1-br" aria-hidden="true" />解決する<span className="ac-mark">実践型</span>AI研修
+              経営を<span className="ac-mark">劇的に変える</span><span className="hero-h1-br" aria-hidden="true" /><span className="ac-mark">2日間</span>の実践型AI研修
             </h1>
             <p className="hero-sub rv rv-d2">
               リアルなビジネス現場 × <span className="blue">東京大学発AIスタートアップ</span>。<br />
