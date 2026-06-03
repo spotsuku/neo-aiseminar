@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Section, Display, Lede, Under } from "../components/primitives.jsx";
+import { LightboxTrigger } from "../components/Lightbox.jsx";
 
 const CASES = [
   {
@@ -53,16 +54,14 @@ export function Evidence() {
             key={c.id}
             className="bg-paper-card border border-ink/8 overflow-hidden flex flex-col"
           >
-            <div className="relative aspect-[16/10] bg-paper-soft">
-              {/* The image-slot custom element lets the host editor drop
-                  a new screenshot in without code changes. */}
+            <LightboxTrigger src={c.src} alt={c.app} className="relative aspect-[16/10] bg-paper-soft">
               <image-slot
                 id={c.slot}
                 shape="rect"
                 placeholder={c.placeholder}
                 src={c.src}
               />
-              <div className="absolute left-0 top-0 w-full flex items-start justify-between p-3 md:p-4">
+              <div className="absolute left-0 top-0 w-full flex items-start justify-between p-3 md:p-4" onClick={e => e.stopPropagation()}>
                 <span className="px-2 py-1 bg-ink/90 text-text-onink font-en text-[10px] md:text-[11px] tracking-[0.18em]">
                   CASE 0{i + 1}
                 </span>
@@ -70,7 +69,7 @@ export function Evidence() {
                   {c.build}
                 </span>
               </div>
-            </div>
+            </LightboxTrigger>
             <div className="p-5 md:p-7 flex flex-col flex-1">
               <div className="text-[12px] md:text-[13px] text-text-secondary font-jp mb-3">
                 {c.industry}
