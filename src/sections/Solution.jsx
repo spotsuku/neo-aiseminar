@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Section, Connector, Display, Lede, Under } from "../components/primitives.jsx";
 import { Carousel } from "../components/Carousel.jsx";
+import { LightboxTrigger } from "../components/Lightbox.jsx";
 
 const DAYS = [
   {
@@ -55,14 +56,14 @@ export function Solution() {
 
       {/* Hands-on Workshop — moved up to sit directly under THE PROGRAM */}
       <div className="mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 md:gap-12 items-center">
-        <div className="aspect-[4/3] bg-paper-soft overflow-hidden">
+        <LightboxTrigger src="assets/workshop-photo.jpg" alt="ワークショップ風景" className="aspect-[4/3] bg-paper-soft overflow-hidden">
           <image-slot
             id="workshop-photo"
             shape="rect"
             placeholder="ワークショップ風景の写真"
             src="assets/workshop-photo.jpg"
           />
-        </div>
+        </LightboxTrigger>
         <div className="min-w-0">
           <span className="font-en uppercase tracking-[0.32em] text-[11px] text-vermilion font-medium mb-3 block">
             ─── Hands-on Workshop
