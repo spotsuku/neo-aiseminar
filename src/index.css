@@ -11,6 +11,73 @@
 html, body { overflow-x: hidden; }
 
 /* ============================================================
+   Lightbox
+   ============================================================ */
+.lb-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,.88);
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+  animation: lbFadeIn .18s ease;
+  cursor: zoom-out;
+}
+@keyframes lbFadeIn { from { opacity:0 } to { opacity:1 } }
+
+.lb-content {
+  position: relative;
+  max-width: min(96vw, 1200px);
+  max-height: 90vh;
+  cursor: default;
+  animation: lbScaleIn .2s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes lbScaleIn { from { transform:scale(.93); opacity:0 } to { transform:scale(1); opacity:1 } }
+
+.lb-img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 32px 80px rgba(0,0,0,.6);
+}
+
+.lb-close {
+  position: fixed; top: 16px; right: 20px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 9001;
+  transition: background .18s;
+}
+.lb-close:hover { background: rgba(255,255,255,.28); }
+
+/* Trigger wrapper */
+.lb-trigger {
+  position: relative;
+  cursor: zoom-in;
+  display: block;
+}
+.lb-hint {
+  position: absolute; bottom: 8px; right: 8px;
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 10px;
+  background: rgba(0,0,0,.55);
+  color: #fff; font-size: 11px;
+  border-radius: 3px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.lb-trigger:hover .lb-hint,
+.lb-trigger:focus .lb-hint { opacity: 1; }
+/* Always show on touch devices */
+@media (hover: none) { .lb-hint { opacity: 1; } }
+
+/* ============================================================
    Carousel — mobile scroll-snap / desktop plain wrapper
    ============================================================ */
 .carousel-root { position: relative; }
