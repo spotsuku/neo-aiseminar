@@ -88,6 +88,11 @@ export function Hero() {
               <span className="pl">累計受講者数</span>
             </div>
             <span className="div" />
+            <div className="stat">
+              <span className="pn">97<span className="u">%</span></span>
+              <span className="pl">受講後の満足度</span>
+            </div>
+            <span className="div" />
             <div className="stat stat-companies">
               <span className="pl">受講実績企業（一部）</span>
               <ul className="company-list">
@@ -100,11 +105,6 @@ export function Hero() {
                 <li>株式会社ビープラスト（サガテレビ）</li>
                 <li>株式会社レックスホールディングス</li>
               </ul>
-            </div>
-            <span className="div" />
-            <div className="stat">
-              <span className="pn">97<span className="u">%</span></span>
-              <span className="pl">受講後の満足度</span>
             </div>
           </div>
         </div>
