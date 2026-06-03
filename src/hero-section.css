@@ -54,6 +54,10 @@
 .aircamp-hero .ac-btn-primary{background:var(--ac-blue);color:#fff;}
 .aircamp-hero .ac-btn-primary:hover{background:var(--ac-blue-deep);}
 
+/* ---- 経営者向けタグ + eyebrow 横並び ---- */
+.aircamp-hero .hero-tags{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.aircamp-hero .hero-tag-badge{display:inline-flex;align-items:center;padding:5px 12px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);border-radius:2px;font-family:var(--ac-sans);font-size:12px;font-weight:700;letter-spacing:.12em;color:#fff;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);}
+
 /* ---- scroll reveal ---- */
 .aircamp-hero .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);}
 .aircamp-hero .rv.in{opacity:1;transform:none;}
@@ -96,29 +100,38 @@
 .aircamp-hero .hero-bleed h1 .ac-mark{background:linear-gradient(transparent 58%, rgba(124,162,222,.42) 58%, rgba(124,162,222,.42) 94%, transparent 94%);}
 .aircamp-hero .hero-sub{font-family:var(--ac-serif);font-weight:500;font-size:clamp(18px,2.2vw,24px);line-height:1.6;color:rgba(255,255,255,.92);margin:0 0 32px;}
 .aircamp-hero .hero-sub .blue{color:var(--ac-blue-soft);}
-.aircamp-hero .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin:0;}
+.aircamp-hero .hero-cta{display:flex;gap:10px;flex-wrap:nowrap;margin:0;}
+@media(max-width:760px){
+  .aircamp-hero .hero-cta .ac-btn{padding:13px 14px;font-size:12.5px;flex:1;white-space:nowrap;}
+}
 .aircamp-hero .hero-bleed .ac-btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
 .aircamp-hero .hero-bleed .ac-btn-ghost:hover{background:rgba(255,255,255,.24);border-color:#fff;color:#fff;}
 
 /* social proof bar */
 .aircamp-hero .proof{display:flex;flex-wrap:nowrap;align-items:stretch;gap:clamp(14px,1.8vw,30px);margin-top:34px;background:rgba(9,19,38,.55);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:24px clamp(20px,2.6vw,34px);box-shadow:0 24px 60px -30px rgba(0,0,0,.6);}
-.aircamp-hero .proof .stat{flex:1;display:flex;flex-direction:column;gap:6px;}
+.aircamp-hero .proof .stat{flex:1;display:flex;flex-direction:column;gap:4px;}
 .aircamp-hero .proof .pn{font-family:var(--ac-num);font-weight:600;font-size:clamp(48px,5.4vw,70px);line-height:.82;color:#fff;letter-spacing:.01em;white-space:nowrap;}
 .aircamp-hero .proof .pn em{font-style:normal;color:var(--ac-blue-soft);}
 .aircamp-hero .proof .pn .u{font-family:var(--ac-serif);font-size:.38em;margin-left:.12em;color:rgba(255,255,255,.88);}
 .aircamp-hero .proof .pl{font-size:13.5px;color:rgba(255,255,255,.82);letter-spacing:.1em;white-space:nowrap;}
-
-/* 受講実績企業スロット */
-.aircamp-hero .proof .stat-companies{flex:2;min-width:0;}
-.aircamp-hero .proof .stat-companies .pl{white-space:normal;margin-bottom:10px;}
-.aircamp-hero .company-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;}
-.aircamp-hero .company-list li{font-family:var(--ac-sans);font-size:12px;color:rgba(255,255,255,.82);letter-spacing:.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.aircamp-hero .company-list li::before{content:"·";margin-right:5px;color:var(--ac-blue-soft);}
-@media(max-width:760px){
-  .aircamp-hero .company-list{grid-template-columns:1fr;}
-}
+.aircamp-hero .proof .ps{font-size:11px;color:rgba(255,255,255,.55);line-height:1.6;margin-top:4px;}
 .aircamp-hero .proof .div{width:1px;align-self:center;min-height:58px;background:rgba(255,255,255,.18);}
-@media(max-width:600px){.aircamp-hero .proof{flex-wrap:wrap;gap:18px 26px;}.aircamp-hero .proof .div{display:none;}}
+/* proof-sub-row: デスクトップはflex item として展開 */
+.aircamp-hero .proof-sub-row{display:contents;}
+
+@media(max-width:600px){
+  /* proof bar → 縦積み2行レイアウト */
+  .aircamp-hero .proof{flex-direction:column;gap:16px;}
+  .aircamp-hero .proof > .div{display:none;}
+  /* 900名突破: 1行目・より大きく */
+  .aircamp-hero .proof .stat-main .pn{font-size:clamp(60px,16vw,80px);}
+  /* 98%と95%+: 2行目・横並び */
+  .aircamp-hero .proof-sub-row{display:flex;flex-direction:row;gap:0;align-items:stretch;border-top:1px solid rgba(255,255,255,.12);padding-top:14px;}
+  .aircamp-hero .proof-sub-row .stat{flex:1;}
+  .aircamp-hero .proof-sub-row .div{display:block;width:1px;min-height:40px;align-self:center;background:rgba(255,255,255,.18);}
+  .aircamp-hero .proof-sub-row .pn{font-size:clamp(30px,8vw,42px);}
+  .aircamp-hero .proof .ps{display:none;}
+}
 
 /* photo caption chip */
 .aircamp-hero .hero-bleed-cap{position:absolute;right:var(--ac-pad);bottom:18px;z-index:3;display:flex;align-items:center;gap:7px;white-space:nowrap;font-size:12px;color:rgba(255,255,255,.82);background:rgba(8,18,38,.5);padding:6px 12px;border-radius:2px;backdrop-filter:blur(4px);}

@@ -64,7 +64,10 @@ export function Hero() {
         </div>
         <div className="ac-wrap hero-bleed-in">
           <div className="hero-bleed-content">
-            <div className="ac-eyebrow hero-eyebrow rv">2-DAY · OUTCOME-DRIVEN</div>
+            <div className="hero-tags rv">
+              <span className="hero-tag-badge">経営者向け</span>
+              <span className="ac-eyebrow hero-eyebrow">2-DAY · OUTCOME-DRIVEN</span>
+            </div>
             <h1 className="rv rv-d1">
               自社課題を、<span className="ac-mark">2日間</span>で<span className="hero-h1-br" aria-hidden="true" />解決する<span className="ac-mark">実践型</span>AI研修
             </h1>
@@ -83,19 +86,25 @@ export function Hero() {
           </div>
 
           <div className="proof rv rv-d2">
-            <div className="stat">
+            {/* Row 1: 900名突破（モバイルは単独で大きく） */}
+            <div className="stat stat-main">
               <span className="pn"><em>900</em><span className="u">名突破</span></span>
               <span className="pl">累計受講者数</span>
             </div>
-            <span className="div" />
-            <div className="stat">
-              <span className="pn">98<span className="u">%</span></span>
-              <span className="pl">お客様満足度</span>
-            </div>
-            <span className="div" />
-            <div className="stat">
-              <span className="pn">95<span className="u">%+</span></span>
-              <span className="pl">業務効率化</span>
+            <span className="div div-main" />
+            {/* Row 2 on mobile: 98% と 95%+ を横並び */}
+            <div className="proof-sub-row">
+              <div className="stat">
+                <span className="pn">98<span className="u">%</span></span>
+                <span className="pl">お客様満足度</span>
+                <span className="ps">"学んで終わり"ではなく、<br />"成果を出せた"と実感する声が多数。</span>
+              </div>
+              <span className="div" />
+              <div className="stat">
+                <span className="pn">95<span className="u">%+</span></span>
+                <span className="pl">業務効率化</span>
+                <span className="ps">AI活用による業務改善が、<br />各分野での現場の動きを変えています。</span>
+              </div>
             </div>
           </div>
         </div>
