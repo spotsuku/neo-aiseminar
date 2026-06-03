@@ -108,7 +108,8 @@
 .aircamp-hero .hero-bleed .ac-btn-ghost:hover{background:rgba(255,255,255,.24);border-color:#fff;color:#fff;}
 
 /* social proof bar */
-.aircamp-hero .proof{display:flex;flex-wrap:nowrap;align-items:stretch;gap:clamp(14px,1.8vw,30px);margin-top:34px;background:rgba(9,19,38,.55);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:24px clamp(20px,2.6vw,34px);box-shadow:0 24px 60px -30px rgba(0,0,0,.6);}
+.aircamp-hero .proof{display:flex;flex-wrap:nowrap;align-items:stretch;gap:clamp(14px,1.8vw,30px);margin-top:20px;background:rgba(9,19,38,.55);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:18px clamp(16px,2.6vw,34px);box-shadow:0 24px 60px -30px rgba(0,0,0,.6);}
+@media(max-width:600px){.aircamp-hero .proof{margin-top:14px;padding:16px 18px;}}
 .aircamp-hero .proof .stat{flex:1;display:flex;flex-direction:column;gap:4px;}
 .aircamp-hero .proof .pn{font-family:var(--ac-num);font-weight:600;font-size:clamp(48px,5.4vw,70px);line-height:.82;color:#fff;letter-spacing:.01em;white-space:nowrap;}
 .aircamp-hero .proof .pn em{font-style:normal;color:var(--ac-blue-soft);}
@@ -130,7 +131,7 @@
   .aircamp-hero .proof-sub-row .stat{flex:1;}
   .aircamp-hero .proof-sub-row .div{display:block;width:1px;min-height:40px;align-self:center;background:rgba(255,255,255,.18);}
   .aircamp-hero .proof-sub-row .pn{font-size:clamp(30px,8vw,42px);}
-  .aircamp-hero .proof .ps{display:none;}
+  .aircamp-hero .proof .ps{display:block;font-size:10.5px;line-height:1.55;}
 }
 
 /* photo caption chip */
