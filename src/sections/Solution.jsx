@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Section, Connector, Display, Lede, Under } from "../components/primitives.jsx";
+import { Carousel } from "../components/Carousel.jsx";
 
 const DAYS = [
   {
@@ -132,7 +133,7 @@ export function Solution() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7">
+        <Carousel desktopClass="grid grid-cols-3 gap-5 md:gap-7">
           {DAYS.map((d, idx) => (
             <div
               key={idx}
@@ -197,7 +198,7 @@ export function Solution() {
               )}
             </div>
           ))}
-        </div>
+        </Carousel>
 
         <div className="mt-10 md:mt-14 p-6 md:p-8 bg-paper-soft border-l-4 border-vermilion flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="font-mincho text-ink text-[16px] md:text-[20px] leading-[1.85]">

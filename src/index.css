@@ -10,6 +10,59 @@
    letting it cause a scrollbar on mobile. */
 html, body { overflow-x: hidden; }
 
+/* ============================================================
+   Carousel — mobile scroll-snap / desktop plain wrapper
+   ============================================================ */
+.carousel-root { position: relative; }
+
+/* Mobile track: horizontal snap */
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;           /* Firefox */
+  gap: 0;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding-right: 0;
+}
+
+/* Desktop fallback: show normally */
+.carousel-desktop { display: none; }
+
+/* Dot indicators */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #c8cfe0;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s, transform .2s;
+}
+.carousel-dot.active {
+  background: #2f66cf;
+  transform: scale(1.25);
+}
+
+/* ≥768px: hide mobile track + dots, show desktop layout */
+@media (min-width: 768px) {
+  .carousel-track  { display: none; }
+  .carousel-dots   { display: none; }
+  .carousel-desktop { display: contents; }
+}
+
 /* image-slot ships with a fixed 240×160 host size (inline-block).
    Override so it fills whatever parent box we give it — the section
    uses aspect-ratio on the wrapper to control the visible frame. */

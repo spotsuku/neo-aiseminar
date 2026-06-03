@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Section, Display, Eyebrow, Lede, Under } from "../components/primitives.jsx";
+import { Carousel } from "../components/Carousel.jsx";
 
 const REASONS = [
   {
@@ -47,7 +48,7 @@ export function Cause() {
         </Lede>
       </div>
 
-      <div className="flex flex-col gap-5 md:gap-7">
+      <Carousel desktopClass="flex flex-col gap-5 md:gap-7">
         {REASONS.map((r) => (
           <article
             key={r.n}
@@ -78,7 +79,7 @@ export function Cause() {
             </div>
           </article>
         ))}
-      </div>
+      </Carousel>
 
       <div className="mt-14 md:mt-24 max-w-3xl">
         <p className="font-mincho text-ink text-[18px] md:text-[clamp(20px,2.2vw,28px)] leading-[1.85] mb-6 md:mb-8">
