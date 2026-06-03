@@ -89,22 +89,13 @@ export function Hero() {
             </div>
             <span className="div" />
             <div className="stat">
-              <span className="pn">97<span className="u">%</span></span>
-              <span className="pl">受講後の満足度</span>
+              <span className="pn">98<span className="u">%</span></span>
+              <span className="pl">お客様満足度</span>
             </div>
             <span className="div" />
-            <div className="stat stat-companies">
-              <span className="pl">受講実績企業（一部）</span>
-              <ul className="company-list">
-                <li>株式会社タカギ</li>
-                <li>株式会社明治産業</li>
-                <li>株式会社SBSプロモーション（静岡放送）</li>
-                <li>株式会社トリドリ</li>
-                <li>株式会社博運社</li>
-                <li>タカトリグループホールディングス株式会社</li>
-                <li>株式会社ビープラスト（サガテレビ）</li>
-                <li>株式会社レックスホールディングス</li>
-              </ul>
+            <div className="stat">
+              <span className="pn">95<span className="u">%+</span></span>
+              <span className="pl">業務効率化</span>
             </div>
           </div>
         </div>
