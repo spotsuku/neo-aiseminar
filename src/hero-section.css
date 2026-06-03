@@ -1,0 +1,132 @@
+/* ============================================================
+   AIリスキリングキャンプ — ヒーローセクション専用CSS
+   （TOP / ナビ 〜 導入ステートメント まで）
+   ============================================================ */
+
+/* ---- Design tokens ---- */
+:root{
+  --ac-navy:#0b1c3a;
+  --ac-navy-line:rgba(255,255,255,.14);
+  --ac-ink:#14233f;
+  --ac-blue:#2f66cf;
+  --ac-blue-deep:#234fa3;
+  --ac-blue-soft:#5b86d6;
+
+  --ac-serif:"Shippori Mincho B1","Noto Serif JP",serif;
+  --ac-sans:"Noto Sans JP",system-ui,sans-serif;
+  --ac-num:"Cormorant Garamond",serif;
+
+  --ac-wrap:1180px;
+  --ac-pad:clamp(20px,5vw,40px);
+}
+
+/* ---- base (scoped under .aircamp-hero) ---- */
+.aircamp-hero *{box-sizing:border-box;}
+.aircamp-hero{
+  font-family:var(--ac-sans);
+  color:var(--ac-ink);
+  line-height:1.85;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.aircamp-hero img{max-width:100%;display:block;}
+.aircamp-hero a{color:inherit;text-decoration:none;}
+.aircamp-hero .ac-wrap{max-width:var(--ac-wrap);margin:0 auto;padding-inline:var(--ac-pad);}
+
+/* ---- shared type / marker / buttons ---- */
+.aircamp-hero .ac-eyebrow{
+  font-family:var(--ac-sans);font-size:13px;font-weight:700;
+  letter-spacing:.34em;text-transform:uppercase;color:var(--ac-blue);
+}
+.aircamp-hero .ac-mark{
+  background:linear-gradient(transparent 56%, #c3d7f2 56%, #c3d7f2 92%, transparent 92%);
+  padding:0 .06em;
+}
+.aircamp-hero .ac-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.7em;
+  font-family:var(--ac-sans);font-weight:700;font-size:15px;letter-spacing:.05em;
+  padding:17px 30px;border-radius:2px;cursor:pointer;border:1px solid transparent;
+  transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease;
+}
+.aircamp-hero .ac-btn .arw{transition:transform .3s ease;}
+.aircamp-hero .ac-btn:hover .arw{transform:translateX(5px);}
+.aircamp-hero .ac-btn-primary{background:var(--ac-blue);color:#fff;}
+.aircamp-hero .ac-btn-primary:hover{background:var(--ac-blue-deep);}
+
+/* ---- scroll reveal ---- */
+.aircamp-hero .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);}
+.aircamp-hero .rv.in{opacity:1;transform:none;}
+.aircamp-hero .rv-d1{transition-delay:.08s;}
+.aircamp-hero .rv-d2{transition-delay:.16s;}
+@media (prefers-reduced-motion:reduce){.aircamp-hero .rv{opacity:1;transform:none;transition:none;}}
+
+/* ============================================================ NAV */
+.aircamp-hero .ac-nav{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px var(--ac-pad);
+  transition:background .4s ease,backdrop-filter .4s ease,padding .4s ease,box-shadow .4s ease;
+}
+.aircamp-hero .ac-nav.scrolled{background:rgba(11,28,58,.86);backdrop-filter:blur(10px);padding-block:14px;box-shadow:0 1px 0 rgba(255,255,255,.06);}
+.aircamp-hero .ac-brand{display:flex;align-items:center;gap:12px;color:#fff;}
+.aircamp-hero .ac-brand-badge{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--ac-blue);color:#fff;font-weight:700;font-size:13px;letter-spacing:.04em;}
+.aircamp-hero .ac-brand-name{font-weight:500;font-size:15.5px;letter-spacing:.08em;color:#fff;}
+.aircamp-hero .ac-nav-right{display:flex;align-items:center;gap:30px;}
+.aircamp-hero .ac-nav-link{color:rgba(255,255,255,.86);font-size:14.5px;font-weight:500;letter-spacing:.04em;transition:color .2s;white-space:nowrap;}
+.aircamp-hero .ac-nav-link:hover{color:#fff;}
+.aircamp-hero .ac-nav-cta{display:inline-flex;align-items:center;gap:.6em;border:1px solid rgba(255,255,255,.5);color:#fff;padding:11px 20px;border-radius:2px;font-size:14px;font-weight:700;letter-spacing:.05em;white-space:nowrap;transition:background .25s,border-color .25s;}
+.aircamp-hero .ac-nav-cta:hover{background:var(--ac-blue);border-color:var(--ac-blue);}
+.aircamp-hero .ac-nav-cta .arw{transition:transform .3s;}
+.aircamp-hero .ac-nav-cta:hover .arw{transform:translateX(4px);}
+@media(max-width:720px){.aircamp-hero .ac-nav-right .ac-nav-link{display:none;}}
+
+/* ============================================================ HERO — full-bleed immersive */
+.aircamp-hero .hero-bleed{position:relative;background:var(--ac-navy);color:#fff;padding:0;min-height:100vh;min-height:100svh;display:flex;overflow:hidden;}
+.aircamp-hero .hero-bg{position:absolute;inset:0;z-index:0;}
+.aircamp-hero .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:62% center;}
+.aircamp-hero .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(112deg,var(--ac-navy) 0%,rgba(11,28,58,.96) 26%,rgba(11,28,58,.55) 44%,rgba(11,28,58,.14) 62%,rgba(11,28,58,0) 78%);}
+.aircamp-hero .hero-bleed-in{position:relative;z-index:2;width:100%;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;padding-top:150px;padding-bottom:48px;}
+.aircamp-hero .hero-bleed-content{flex:1;display:flex;flex-direction:column;justify-content:center;max-width:740px;}
+.aircamp-hero .hero-eyebrow{margin-bottom:14px;}
+.aircamp-hero .hero-bleed h1{font-family:var(--ac-serif);font-weight:700;font-size:clamp(36px,5vw,66px);line-height:1.28;letter-spacing:.02em;margin:18px 0 24px;text-shadow:0 2px 30px rgba(0,0,0,.4);}
+.aircamp-hero .hero-bleed h1 .ac-mark{background:linear-gradient(transparent 58%, rgba(124,162,222,.42) 58%, rgba(124,162,222,.42) 94%, transparent 94%);}
+.aircamp-hero .hero-sub{font-family:var(--ac-serif);font-weight:500;font-size:clamp(18px,2.2vw,24px);line-height:1.6;color:rgba(255,255,255,.92);margin:0 0 32px;}
+.aircamp-hero .hero-sub .blue{color:var(--ac-blue-soft);}
+.aircamp-hero .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin:0;}
+.aircamp-hero .hero-bleed .ac-btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+.aircamp-hero .hero-bleed .ac-btn-ghost:hover{background:rgba(255,255,255,.24);border-color:#fff;color:#fff;}
+
+/* social proof bar */
+.aircamp-hero .proof{display:flex;flex-wrap:nowrap;align-items:stretch;gap:clamp(14px,1.8vw,30px);margin-top:34px;background:rgba(9,19,38,.55);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:24px clamp(20px,2.6vw,34px);box-shadow:0 24px 60px -30px rgba(0,0,0,.6);}
+.aircamp-hero .proof .stat{flex:1;display:flex;flex-direction:column;gap:6px;}
+.aircamp-hero .proof .pn{font-family:var(--ac-num);font-weight:600;font-size:clamp(48px,5.4vw,70px);line-height:.82;color:#fff;letter-spacing:.01em;white-space:nowrap;}
+.aircamp-hero .proof .pn em{font-style:normal;color:var(--ac-blue-soft);}
+.aircamp-hero .proof .pn .u{font-family:var(--ac-serif);font-size:.38em;margin-left:.12em;color:rgba(255,255,255,.88);}
+.aircamp-hero .proof .pl{font-size:13.5px;color:rgba(255,255,255,.82);letter-spacing:.1em;white-space:nowrap;}
+.aircamp-hero .proof .div{width:1px;align-self:center;min-height:58px;background:rgba(255,255,255,.18);}
+@media(max-width:600px){.aircamp-hero .proof{flex-wrap:wrap;gap:18px 26px;}.aircamp-hero .proof .div{display:none;}}
+
+/* photo caption chip */
+.aircamp-hero .hero-bleed-cap{position:absolute;right:var(--ac-pad);bottom:18px;z-index:3;display:flex;align-items:center;gap:7px;white-space:nowrap;font-size:12px;color:rgba(255,255,255,.82);background:rgba(8,18,38,.5);padding:6px 12px;border-radius:2px;backdrop-filter:blur(4px);}
+.aircamp-hero .hero-bleed-cap .dot{width:6px;height:6px;border-radius:50%;background:var(--ac-blue-soft);}
+
+@media(max-width:760px){
+  .aircamp-hero .hero-bg::after{background:linear-gradient(180deg,rgba(7,16,34,.55) 0%,rgba(7,16,34,.5) 35%,rgba(7,16,34,.92) 100%);}
+  .aircamp-hero .hero-bleed-content{max-width:none;}
+  .aircamp-hero .hero-bleed-cap{display:none;}
+}
+
+/* ============================================================ 導入ステートメント帯（ネイビー） */
+.aircamp-hero .darkband{position:relative;background:var(--ac-navy);color:#fff;padding:clamp(56px,6.5vw,86px) 0;overflow:hidden;}
+.aircamp-hero .darkband::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:radial-gradient(120% 90% at 75% 0,#000 30%,transparent 78%);mask-image:radial-gradient(120% 90% at 75% 0,#000 30%,transparent 78%);}
+.aircamp-hero .darkband .ac-wrap{position:relative;z-index:2;}
+.aircamp-hero .demo-statement{max-width:1040px;margin:0 auto;text-align:center;}
+.aircamp-hero .demo-statement p{font-family:var(--ac-serif);font-weight:600;font-size:clamp(26px,3.6vw,46px);line-height:1.55;margin:0;color:#fff;letter-spacing:.02em;}
+.aircamp-hero .demo-statement .ac-mark{background:none;padding:0;color:#fff;box-shadow:inset 0 -0.22em 0 rgba(91,134,214,.9);}
+
+/* downward chevron cue */
+.aircamp-hero .scroll-cue{display:flex;justify-content:center;margin-top:38px;}
+.aircamp-hero .scroll-cue::after{content:"";width:18px;height:18px;border-right:2px solid var(--ac-blue-soft);border-bottom:2px solid var(--ac-blue-soft);transform:rotate(45deg);opacity:.85;animation:aircampCue 1.9s ease-in-out infinite;}
+@keyframes aircampCue{0%,100%{transform:rotate(45deg) translateY(-3px);opacity:.55;}50%{transform:rotate(45deg) translateY(4px);opacity:.95;}}
+@media(prefers-reduced-motion:reduce){.aircamp-hero .scroll-cue::after{animation:none;transform:rotate(45deg);}}

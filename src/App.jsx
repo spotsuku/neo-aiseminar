@@ -10,7 +10,6 @@ import { Trust } from "./sections/Trust.jsx";
 import { CTA } from "./sections/CTA.jsx";
 import { MidCTA } from "./sections/MidCTA.jsx";
 import { Footer } from "./sections/Footer.jsx";
-import { TopNav } from "./components/TopNav.jsx";
 import { content } from "./content.js";
 
 /**
@@ -62,36 +61,11 @@ function useScrollFade() {
   }, []);
 }
 
-/**
- * TopNav swaps to a translucent-dark style when scrolled over a dark
- * section. Detection is by data-tone="dark" set on the section.
- */
-function useOverDark() {
-  const [overDark, setOverDark] = React.useState(true);
-  React.useEffect(() => {
-    const darks = Array.from(document.querySelectorAll('[data-tone="dark"]'));
-    const onScroll = () => {
-      const probe = 80;
-      const isDark = darks.some((el) => {
-        const r = el.getBoundingClientRect();
-        return r.top <= probe && r.bottom > probe;
-      });
-      setOverDark(isDark);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return overDark;
-}
-
 export function App() {
   useScrollFade();
-  const overDark = useOverDark();
 
   return (
     <>
-      <TopNav overDark={overDark} />
       <Hero />
       <Evidence />
       <Diagnosis />
