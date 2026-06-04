@@ -34,15 +34,16 @@ export function FreeRoadmap() {
         </div>
 
         {/* Roadmap image area */}
-        <div className="border-2 border-dashed border-ink/15 rounded-sm overflow-hidden mb-8 relative bg-paper-soft">
-          <LightboxTrigger src="assets/roadmap.png" alt="AI導入ロードマップ" className="block">
-            <image-slot
-              id="roadmap-image"
-              shape="rect"
-              placeholder="AI導入ロードマップ画像をここにドロップ"
-              src="assets/roadmap.png"
-              style={{width:"100%", minHeight:"320px", display:"block"}}
-            />
+        <div className="border-2 border-dashed border-ink/15 rounded-sm overflow-hidden mb-8 bg-paper-soft">
+          <LightboxTrigger src="assets/roadmap.png" alt="AX推進ロードマップ" className="block">
+            <picture>
+              <source srcSet="assets/roadmap.webp" type="image/webp" />
+              <img
+                src="assets/roadmap.png"
+                alt="AX推進ロードマップ"
+                className="w-full h-auto block"
+              />
+            </picture>
           </LightboxTrigger>
         </div>
 
