@@ -71,8 +71,7 @@ export function Hero() {
               経営を<span className="ac-mark">劇的に変える</span><span className="hero-h1-br" aria-hidden="true" /><span className="ac-mark">2日間</span>の実践型AI研修
             </h1>
             <p className="hero-sub rv rv-d2">
-              リアルなビジネス現場 × <span className="blue">東京大学発AIスタートアップ</span>。<br />
-              経営者のための、実装まで踏み込むAI研修。
+              リアルなビジネス現場 × <span className="blue">東京大学発AIスタートアップ</span>。<span className="hero-sub-br" />経営者のための、実装まで踏み込むAI研修。
             </p>
             <div className="hero-cta rv rv-d2">
               <a className="ac-btn ac-btn-primary" href="#free-roadmap">
