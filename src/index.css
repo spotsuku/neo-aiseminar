@@ -11,6 +11,62 @@
 html, body { overflow-x: hidden; }
 
 /* ============================================================
+   Sticky CTA (mobile only)
+   ============================================================ */
+.sticky-cta {
+  display: none; /* desktop: hidden */
+}
+@media (max-width: 767px) {
+  .sticky-cta {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 200;
+    background: #0b1c3a;
+    padding: 12px 16px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    box-shadow: 0 -2px 20px rgba(0,0,0,.25);
+    gap: 10px;
+    transform: translateY(110%);
+    transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .sticky-cta--show {
+    transform: translateY(0);
+  }
+  .sticky-cta__btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #2f66cf;
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background .2s;
+  }
+  .sticky-cta__btn:hover { background: #234fa3; }
+  .sticky-cta__close {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    color: rgba(255,255,255,.7);
+    font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background .18s;
+  }
+  .sticky-cta__close:hover { background: rgba(255,255,255,.22); }
+}
+
+/* ============================================================
    Lightbox
    ============================================================ */
 .lb-overlay {

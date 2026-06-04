@@ -11,6 +11,7 @@ import { CTA } from "./sections/CTA.jsx";
 import { MidCTA } from "./sections/MidCTA.jsx";
 import { CtaBanner } from "./sections/CtaBanner.jsx";
 import { Footer } from "./sections/Footer.jsx";
+import { StickyCTA } from "./components/StickyCTA.jsx";
 import { content } from "./content.js";
 
 /**
@@ -88,6 +89,7 @@ export function App() {
       <Trust />
       <CTA />
       <Footer />
+      <StickyCTA />
     </>
   );
 }
