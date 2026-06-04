@@ -56,7 +56,10 @@ export function Hero() {
       {/* HERO */}
       <section className="hero-bleed" id="top">
         <div className="hero-bg">
-          <img src="assets/training.jpg" alt="実際の研修風景" />
+          <picture>
+            <source srcSet="assets/training.webp" type="image/webp" />
+            <img src="assets/training.jpg" alt="実際の研修風景" />
+          </picture>
         </div>
         <div className="ac-wrap hero-bleed-in">
           <div className="hero-bleed-content">
