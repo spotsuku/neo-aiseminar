@@ -75,7 +75,7 @@ export function Hero() {
               経営者のための、実装まで踏み込むAI研修。
             </p>
             <div className="hero-cta rv rv-d2">
-              <a className="ac-btn ac-btn-primary" href={content.links.consultation}>
+              <a className="ac-btn ac-btn-primary" href="#free-roadmap">
                 オリジナルロードマップを無料で作成する <span className="arw">↓</span>
               </a>
               <a className="ac-btn ac-btn-ghost" href={content.links.consultation}>

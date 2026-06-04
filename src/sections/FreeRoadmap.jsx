@@ -4,7 +4,7 @@ import { content } from "../content.js";
 
 export function FreeRoadmap() {
   return (
-    <section data-screen-label="FR FreeRoadmap" className="bg-paper py-14 md:py-20">
+    <section id="free-roadmap" data-screen-label="FR FreeRoadmap" className="bg-paper py-14 md:py-20">
       <div className="mx-auto max-w-wrap px-5 md:px-10">
 
         {/* Eyebrow */}
