@@ -58,7 +58,7 @@ export function FreeRoadmap() {
             <strong className="text-ink font-semibold">オリジナルロードマップ</strong>を作成いたします。
           </p>
           <a
-            href={content.links.consultation}
+            href={content.links.document}
             className="inline-flex items-center justify-center gap-3 bg-[#f97316] hover:bg-[#ea6c0a] text-white font-jp font-bold text-[15px] md:text-[17px] px-8 md:px-12 py-4 md:py-5 rounded-full shadow-md transition-colors"
           >
             無料でロードマップ＆事例を受け取る
