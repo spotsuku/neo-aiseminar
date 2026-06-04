@@ -83,7 +83,7 @@
 .aircamp-hero .ac-nav-cta:hover{background:var(--ac-blue);border-color:var(--ac-blue);}
 .aircamp-hero .ac-nav-cta .arw{transition:transform .3s;}
 .aircamp-hero .ac-nav-cta:hover .arw{transform:translateX(4px);}
-@media(max-width:720px){.aircamp-hero .ac-nav-right .ac-nav-link{display:none;}}
+@media(max-width:720px){.aircamp-hero .ac-nav{display:none;}}
 
 /* ============================================================ HERO — full-bleed immersive */
 .aircamp-hero .hero-bleed{position:relative;background:var(--ac-navy);color:#fff;padding:0;min-height:100vh;min-height:100svh;display:flex;overflow:hidden;}
