@@ -23,7 +23,7 @@ export function FreeRoadmap() {
 
         {/* Bonus text */}
         <div className="flex justify-center mb-8">
-          <p className="inline-block font-jp text-[13px] md:text-[14px] text-ink border-2 border-[#f97316] rounded-sm px-5 py-2.5 font-medium">
+          <p className="inline-block font-mincho text-[13px] md:text-[14px] text-ink border-2 border-[#f97316] rounded-sm px-5 py-2.5 font-medium">
             🎁 さらに今なら<strong className="text-[#f97316]">他社の成功事例集</strong>も無料でプレゼント
           </p>
         </div>
