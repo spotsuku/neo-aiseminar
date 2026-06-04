@@ -165,8 +165,8 @@
   /* SP: 中央揃え */
   .aircamp-hero .demo-statement{text-align:center;}
   .aircamp-hero .demo-statement p{font-size:clamp(18px,4.8vw,24px);}
-  /* 「まずは〜把握。」を大きく */
-  .aircamp-hero .demo-statement .demo-sub{font-size:clamp(20px,5.5vw,28px);font-weight:600;margin-top:20px;}
+  /* demo-sub: デスクトップより少し小さく */
+  .aircamp-hero .demo-statement .demo-sub{font-size:clamp(16px,4.5vw,22px);font-weight:500;margin-top:16px;}
   /* demo-sub 改行: SP のみ表示 */
   .aircamp-hero .demo-sub-br{display:block;}
 }
