@@ -46,9 +46,6 @@ export function Hero() {
 
       {/* NAV */}
       <header className="ac-nav" ref={navRef}>
-        <a className="ac-brand" href="#top">
-          <span className="ac-brand-badge">AI</span>
-        </a>
         <nav className="ac-nav-right">
           <a className="ac-nav-link" href="#course">研修内容</a>
           <a className="ac-nav-link" href={content.links.consultation}>無料相談</a>
