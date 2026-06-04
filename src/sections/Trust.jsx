@@ -14,7 +14,7 @@ const COMPANIES = [
 
 export function Trust() {
   return (
-    <Section label="08 Trust" tone="light">
+    <Section id="trust" label="08 Trust" tone="light">
       <Connector num="08" en="Credibility" jp="信頼構築" />
 
       <div className="max-w-3xl mb-12 md:mb-16">
