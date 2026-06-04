@@ -105,9 +105,7 @@ export function Hero() {
                 <span className="ps">AI活用による業務改善が、<br />各分野での現場の動きを変えています。</span>
               </div>
             </div>
-            <a href="#trust" className="proof-link rv rv-d2">
-              受講実績を見る <span aria-hidden>→</span>
-            </a>
+
           </div>
         </div>
         <div className="hero-bleed-cap"><span className="dot" />実際の研修風景</div>
