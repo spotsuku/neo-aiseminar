@@ -21,17 +21,10 @@ export function FreeRoadmap() {
           あなたの会社専用の<span className="underline decoration-vermilion decoration-[3px] underline-offset-[6px]">ロードマップ</span>を無料作成
         </h2>
 
-        {/* Bonus badge */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex items-center gap-3 bg-paper-soft border border-ink/10 rounded-full px-5 py-3 shadow-sm">
-            <span className="bg-[#f97316] text-white font-bold text-[11px] px-3 py-1 rounded-full tracking-wide">
-              + BONUS
-            </span>
-            <span className="font-jp text-[13px] md:text-[14px] text-ink">
-              さらに今なら<strong className="text-ink">他社の成功事例集</strong>も無料でプレゼント
-            </span>
-          </div>
-        </div>
+        {/* Bonus text (no badge) */}
+        <p className="text-center font-jp text-[13px] md:text-[14px] text-text-secondary mb-8">
+          さらに今なら<strong className="text-ink">他社の成功事例集</strong>も無料でプレゼント
+        </p>
 
         {/* Roadmap image area */}
         <p className="text-center font-mincho font-bold text-ink text-[14px] md:text-[16px] mb-3">
