@@ -78,6 +78,9 @@ export function Hero() {
               <a className="ac-btn ac-btn-primary" href={content.links.consultation}>
                 オリジナルロードマップを無料で作成する <span className="arw">↓</span>
               </a>
+              <a className="ac-btn ac-btn-ghost" href={content.links.consultation}>
+                無料相談を予約する <span className="arw">→</span>
+              </a>
             </div>
           </div>
 
