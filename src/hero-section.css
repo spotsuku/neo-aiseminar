@@ -156,6 +156,7 @@
 .aircamp-hero .darkband .ac-wrap{position:relative;z-index:2;}
 .aircamp-hero .demo-statement{max-width:1040px;margin:0 auto;text-align:center;}
 .aircamp-hero .demo-statement p{font-family:var(--ac-serif);font-weight:600;font-size:clamp(20px,3.6vw,46px);line-height:1.55;margin:0;color:#fff;letter-spacing:.02em;}
+.aircamp-hero .demo-statement .demo-sub{margin-top:18px;font-size:clamp(16px,2vw,26px);font-weight:500;color:rgba(255,255,255,.85);}
 @media(max-width:600px){
   .aircamp-hero .demo-statement{text-align:left;}
   .aircamp-hero .demo-statement p{font-size:clamp(18px,4.8vw,24px);}
