@@ -116,9 +116,9 @@ export function Hero() {
           <div className="demo-statement rv">
             <p>
               いち早くAIを業務に組み込んだ会社が<br />
-              <span className="ac-mark">成功する時代</span>です。
+              <span className="ac-mark">成功する時代</span>。
             </p>
-            <p className="demo-sub rv">まずはあなたの会社の<span className="ac-mark">現在地を把握</span>。</p>
+            <p className="demo-sub rv">まずはあなたの会社の<span className="demo-sub-br" aria-hidden="true" /><span className="ac-mark">現在地を把握</span>。</p>
           </div>
           <div className="scroll-cue" aria-hidden="true" />
         </div>
