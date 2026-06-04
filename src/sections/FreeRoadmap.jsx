@@ -34,8 +34,8 @@ export function FreeRoadmap() {
         </div>
 
         {/* Roadmap image area */}
-        <p className="text-center font-jp font-bold text-ink text-[14px] md:text-[16px] mb-3">
-          📋 社内でのAI導入の始め方と社内浸透方法まで<span className="text-vermilion">丸わかり！</span>
+        <p className="text-center font-mincho font-bold text-ink text-[14px] md:text-[16px] mb-3">
+          社内でのAI導入の始め方と社内浸透方法まで<span className="text-vermilion">丸わかり！</span>
         </p>
         <div className="border-2 border-dashed border-ink/15 rounded-sm mb-8 bg-paper-soft overflow-x-auto">
           <LightboxTrigger src="assets/roadmap.png" alt="AX推進ロードマップ" className="block" style={{minWidth:"858px"}}>
