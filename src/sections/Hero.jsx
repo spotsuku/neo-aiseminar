@@ -48,6 +48,7 @@ export function Hero() {
       <header className="ac-nav" ref={navRef}>
         <nav className="ac-nav-right">
           <a className="ac-nav-link" href="#course">研修内容</a>
+          <a className="ac-nav-link" href="#trust">受講実績</a>
           <a className="ac-nav-link" href={content.links.consultation}>無料相談</a>
           <a className="ac-nav-cta" href={content.links.document}>資料請求 <span className="arw">→</span></a>
         </nav>
