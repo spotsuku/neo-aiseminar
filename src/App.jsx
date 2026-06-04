@@ -83,7 +83,7 @@ export function App() {
       <ROI />
       <CtaBanner
         eyebrow="Next Step"
-        headline="ROIが見えたら、あとは動くだけ。次の期は満席になる前に。"
+        headline="ROIが見えたら、あとは動くだけ。"
         sub="定員8社・少人数制。次の開催日はお問い合わせください。"
       />
       <Trust />
