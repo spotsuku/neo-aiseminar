@@ -9,6 +9,7 @@ import { ROI } from "./sections/ROI.jsx";
 import { Trust } from "./sections/Trust.jsx";
 import { CTA } from "./sections/CTA.jsx";
 import { MidCTA } from "./sections/MidCTA.jsx";
+import { CtaBanner } from "./sections/CtaBanner.jsx";
 import { Footer } from "./sections/Footer.jsx";
 import { content } from "./content.js";
 
@@ -68,12 +69,22 @@ export function App() {
     <>
       <Hero />
       <Evidence />
+      <CtaBanner
+        eyebrow="Free Consultation"
+        headline="自社の業務に、AIはどう使える？まずは話を聞きにくる感覚で。"
+        sub="30分のオンライン無料相談で、受講内容と自社への適用イメージをお伝えします。"
+      />
       <Diagnosis />
       <Cause />
       <Essence />
       <Solution />
       <MidCTA {...content.midCTA} />
       <ROI />
+      <CtaBanner
+        eyebrow="Next Step"
+        headline="ROIが見えたら、あとは動くだけ。次の期は満席になる前に。"
+        sub="定員8社・少人数制。次の開催日はお問い合わせください。"
+      />
       <Trust />
       <CTA />
       <Footer />
