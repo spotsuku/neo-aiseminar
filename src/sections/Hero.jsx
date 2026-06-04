@@ -49,6 +49,7 @@ export function Hero() {
         <nav className="ac-nav-right">
           <a className="ac-nav-link" href="#course">研修内容</a>
           <a className="ac-nav-link" href={content.links.consultation}>無料相談</a>
+          <a className="ac-nav-cta" href={content.links.document}>資料請求 <span className="arw">→</span></a>
         </nav>
       </header>
 
@@ -103,6 +104,9 @@ export function Hero() {
                 <span className="ps">AI活用による業務改善が、<br />各分野での現場の動きを変えています。</span>
               </div>
             </div>
+            <a href="#trust" className="proof-link rv rv-d2">
+              受講実績を見る <span aria-hidden>→</span>
+            </a>
           </div>
         </div>
         <div className="hero-bleed-cap"><span className="dot" />実際の研修風景</div>
