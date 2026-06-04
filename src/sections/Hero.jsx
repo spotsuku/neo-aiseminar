@@ -76,10 +76,7 @@ export function Hero() {
             </p>
             <div className="hero-cta rv rv-d2">
               <a className="ac-btn ac-btn-primary" href={content.links.consultation}>
-                無料相談を予約する <span className="arw">→</span>
-              </a>
-              <a className="ac-btn ac-btn-ghost" href={content.links.document}>
-                資料請求 <span className="arw">→</span>
+                オリジナルロードマップを無料で作成する <span className="arw">↓</span>
               </a>
             </div>
           </div>
@@ -119,6 +116,7 @@ export function Hero() {
               いち早くAIを業務に組み込んだ会社が<br />
               <span className="ac-mark">成功する時代</span>です。
             </p>
+            <p className="demo-sub rv">まずはあなたの会社の<span className="ac-mark">現在地を把握</span>。</p>
           </div>
           <div className="scroll-cue" aria-hidden="true" />
         </div>
