@@ -5,8 +5,9 @@ import { content } from "../content.js";
 export function FreeRoadmap() {
   return (
     <section id="free-roadmap" data-screen-label="FR FreeRoadmap" className="bg-paper py-14 md:py-20">
-      <div className="mx-auto max-w-wrap px-5 md:px-10">
 
+      {/* テキスト部分: 通常幅 */}
+      <div className="mx-auto max-w-wrap px-5 md:px-10">
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-4 mb-6">
           <span className="flex-1 h-px bg-ink/15 max-w-[80px]" />
@@ -28,26 +29,32 @@ export function FreeRoadmap() {
           </p>
         </div>
 
-        {/* Roadmap image area */}
+        {/* Roadmap caption */}
         <p className="text-center font-mincho font-bold text-ink text-[14px] md:text-[16px] mb-3">
           社内でのAI導入の始め方と社内浸透方法まで<span className="text-vermilion">イメージができる</span>
         </p>
+      </div>
+
+      {/* ロードマップ画像: 広め幅 */}
+      <div className="mx-auto max-w-[1400px] px-4 md:px-6 mb-8">
         {/* モバイル: 横スクロール+858px / PC: 全幅フィット */}
-        <div className="border-2 border-dashed border-ink/15 rounded-sm mb-8 bg-paper-soft md:overflow-hidden overflow-x-auto">
+        <div className="border-2 border-dashed border-ink/15 rounded-sm bg-paper-soft md:overflow-hidden overflow-x-auto">
           <LightboxTrigger src="assets/roadmap.png" alt="AX推進ロードマップ" className="block">
             <picture>
               <source srcSet="assets/roadmap.webp" type="image/webp" />
               <img
                 src="assets/roadmap.png"
                 alt="AX推進ロードマップ"
-                className="h-auto block w-full md:w-full"
+                className="h-auto block w-full"
                 style={{minWidth:"858px"}}
               />
             </picture>
           </LightboxTrigger>
         </div>
+      </div>
 
-        {/* Signup card */}
+      {/* Signup card: 通常幅 */}
+      <div className="mx-auto max-w-wrap px-5 md:px-10">
         <div className="bg-[#eef3fb] rounded-sm px-6 md:px-12 py-10 md:py-12 text-center">
           <p className="font-mincho font-bold text-ink text-[clamp(22px,3.5vw,38px)] leading-[1.4] mb-5">
             たった<span className="font-en-serif italic text-vermilion text-[1.4em] leading-none">1</span>分で申し込み完了！
@@ -65,8 +72,8 @@ export function FreeRoadmap() {
             <span aria-hidden className="text-[18px]">↓</span>
           </a>
         </div>
-
       </div>
+
     </section>
   );
 }
